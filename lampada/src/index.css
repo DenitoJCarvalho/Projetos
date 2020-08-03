@@ -1,0 +1,50 @@
+section {
+    border: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+section img {
+    position: fixed;
+}
+
+section img:nth-child(2) {
+    display: none;
+}
+
+section div {
+    position: relative;
+    border: none;
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+    top: 50%;
+}
+
+section button {
+    border: none;
+    border-top-right-radius: 5px;
+    width: 100px;
+    height: 32px;
+    outline: none;
+    text-transform: capitalize;
+    background-color: rgba(245, 164, 43, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+
+section button:hover {
+    border: 2px solid rgba(245, 164, 43, 1);
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(245, 164, 43, 1);
+    text-decoration: underline rgb(224, 141, 17);
+}
+
+section button:visited {
+    height: 35px;
+}

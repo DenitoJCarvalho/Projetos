@@ -1,0 +1,87 @@
+/* coding: utf-8 */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.rectangle {
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25%;
+    height: 30%;
+    box-shadow: 2px 5px 5px rgba(51, 50, 50, 0.65);
+    background-color: rgba(186, 206, 178, 0.65);
+}
+
+.rectangle h2,
+.rectangle div {
+    width: 100%;
+    padding: 1.5%;
+}
+
+.rectangle h2 {
+    text-align: center;
+    color: rgba(255, 99, 71, 1);
+    text-shadow: 1px 1px 1px rgba(51, 50, 50, 0.65);
+}
+
+.rectangle div {
+    height: 20%;
+    text-align: center;
+}
+
+input[type=text] {
+    border: none;
+    border-radius: 5px;
+    width: 75%;
+    height: 25px;
+    padding: 1%;
+    outline: none;
+    font-size: .8750em;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 2px 5px 5px rgba(51, 50, 50, 0.65);
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 25%;
+    height: 32px;
+    background-color: rgba(255, 99, 71, 1);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 2px 5px 5px rgba(51, 50, 50, 0.65);
+    font-size: .750em;
+    letter-spacing: 0.12rem;
+    outline: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    border-bottom: 2px solid rgba(254, 39, 18, 1);
+}
+
+.msg {
+    color: rgba(8, 6, 97, 0.875);
+}

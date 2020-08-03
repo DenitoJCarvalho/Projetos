@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* corpo da página */
+body{
+    margin: 0;
+    padding: 0;
+    /*background:;*/
+}
+
+/* centralizando conteúdo */
+.content-center{
+    border: 1px hidden;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 1);
+}
+
+.content-center{
+    text-align: center;
+}
+
+.content-center img{
+    width: 70%;
+}
+
+.content-center form{
+    margin: 20px;
+}
+
+.content-center input, .content-center button{
+    border: none;
+    width: 100%;
+    padding: 10px 5px;
+    outline: none;
+}
+
+.content-center input{
+    border-bottom-color: rgb(119, 118, 118, 1);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.content-center input:focus{
+    border-bottom-color:rgb(241, 151, 33);
+}
+
+/*botão*/
+.content-center button{
+    border-radius: 3px;
+    background-color: rgb(241, 151, 33);
+    color: rgba(255, 255, 255, 1);
+}
+
+.content-center button:hover{
+    background-color: tomato;
+    cursor: pointer;
+}
+
+.content-center button:active{
+    background-color:rgba(248, 102, 4, 0.835);
+    cursor: pointer;
+}
+
+/*cabeçalho*/
+header a{
+    color: #666;
+    text-decoration: none;
+}
+
+header a:visited{
+    color: rgba(1, 1, 1, 1)
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+header a:focus{
+    color: rgb(158, 8, 8);
+}
+
+/* titulo */
+header h1{
+    font-size: 2.53m;
+    text-align: center;
+    margin: 50px auto;
+}
+
+
+/* rodapé*/
+footer{
+    font-size: 0.8em;
+    text-align: center;
+    margin: 0 auto;
+}
