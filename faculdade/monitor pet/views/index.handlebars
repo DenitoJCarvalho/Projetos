@@ -1,0 +1,202 @@
+<!--<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Monitor Pet</title>
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>-->
+    <main class="container">
+        <!-- cabeçalho -->
+        <header>
+            <h1>monitor pet</h1>
+        </header>
+        <!-- todo conteúdo principal -->
+        <section class="content">
+            <!-- menu interativo -->
+            <nav class="menu">
+                <ul>
+                    <!-- listas com opções -->
+                    <!-- link para cadastrar tutor -->
+                    <li><a href="#cadastrarTutor">tutor</a></li>
+                    <!-- link para cadastrar pet -->
+                    <li><a href="#cadastrarPet">pet</a></li>
+                    <!-- link para entrar na tela de consulta -->
+                    <li><a href="#consultar">consultar</a></li>
+                </ul>
+            </nav>
+            <!-- cadastrar tutor -->
+            <section class="box" id="cadastrarTutor">
+                <!-- barra que contem o botão fechar -->
+                <div>
+                    <h4>cadastro do tutor</h4>
+                    <a href="#">X</a>
+                </div>
+                <!-- formulario cadastro tutor -->
+                <form action="/tutor" method="POST">
+                    <fieldset>
+                        <legend>informações pessoais</legend>
+                        <label for="nome">nome</label>
+                        <input type="text" name="nome" class="field-1" id="nome" maxlength="20" autocomplete="off" required />
+                        <br><br>
+                        <label for="sobrenome">sobrenome</label>
+                        <input type="text" name="sobrenome" class="field-1" id="sobrenome" maxlength="50"  autocomplete="off" required>
+                        <br><br>
+                        <label for="cpf">cpf</label>
+                        <input type="text" name="cpf" class="field-1" id="cpf" maxlength="11" autocomplete="off" required>
+                        <br><br>
+                        <label for="data-nascimento">data de nascimento</label>
+                        <input type="date" name="dataNascimento" class="field-1" id="data-nascimento" min="1930-01-01" max="2020-12-31" autocomplete="off" required>
+                        <br><br>
+                        <label for="sexo">sexo</label>
+                        <br>
+                        <input type="radio"  name="sexo" id="masculino" value="M">M
+                        <input type="radio"  name="sexo" id="femenino" value="F">F
+                    </fieldset>
+                    <fieldset>
+                        <legend>endereço</legend>
+                        <label for="logrodouro">logradouro</label>
+                        <input type="text" class='field-1' id="logradouro" name="logradouro" autocomplete="off" required>
+                        <br><br>
+                        <label for="numero">numero</label>
+                        <input type="number" class="field-1" id="numero" name="numero" autocomplete="off" required>
+                        <br><br>
+                        <label for="bairro">bairro</label>
+                        <input type="text" class="field-1" id="numero" name="bairro" autocomplete="off" required>
+                        <br><br>
+                        <label for="cidade">cidade</label>
+                        <input type="text" class="field-1" id="cidade" name="cidade" autocomplete="off" required>
+                        <br><br>
+                        <label for="estado">estado</label>
+                        <select id="estado" name="estado" autocomplete="off" required>
+                            <option></option>
+                            <option value="acre-ac">acre-ac</option>
+                            <option value="alagoas-al">alagoas-al</option>
+                            <option value="amapá-ap">amapá-ap</option>
+                            <option value="amazonas-am">amazonas-am</option>
+                            <option value="bahia-ba">bahia-ba</option>
+                            <option value="ceará-ce">ceará-ce</option>
+                            <option value="distrito federal-df">distrito federal-df</option>
+                            <option value="espirio santo-es">espirito santo-es</option>
+                            <option value="goiás-go">goiás-go</option>
+                            <option value="maranhão-ma">maranhão-ma</option>
+                            <option value="mato grosso-mt">mato grosso-mt</option>
+                            <option value="mato grosso do sul-ms">mato grosso do sul-ms</option>
+                            <option value="minas gerais-mg">minas gerais-mg</option>
+                            <option value="pará-pa">pará-pa</option>
+                            <option value="paraíba-pb">paraíba-pb</option>
+                            <option value="paraná-pr">paraná-pr</option>
+                            <option value="pernambuco-pe">pernambuco-pe</option>
+                            <option value="piauí-pi">piauí-pi</option>
+                            <option value="rio de janeiro-rj">rio de janeiro-rj</option>
+                            <option value="rio grande do norte-rn">rio grande do norte-rn</option>
+                            <option value="rio grande do sul-rs">rio grande do sul-rs</option>
+                            <option value="rondônia-ro">rondônia-ro</option>
+                            <option value="roraima-rr">roraima-rr</option>
+                            <option value="santa catarina-sc">santa catarina-sc</option>
+                            <option value="são paulo-sp">são paulo-sp</option>
+                            <option value="sergipe-se">sergipe-se</option>
+                            <option value="tocantins-to">tocantins-to</option>
+                        </select>
+                        <br><br>    
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>contato</legend>
+                        <label for="telefone">telefone fixo</label>
+                        <input type="text" class="field-1" id="telefone" name="telefone" autocomplete="off" required>
+                        <br><br>
+                        <label for="celular">celular</label>
+                        <input type="text" class="field-1" id="celular" name="celular" autocomplete="off" required>
+                        <br><br>
+                        <label for="email">email</label>
+                        <input type="email" class="field-1" id="email" name="email" autocomplete="off" required>
+                    </fieldset>
+                    <button type="submit" class="btn-form" id="cad-tutor">enviar</button>
+                </form>
+
+            </section>
+
+            <!-- cadastrar pet -->
+            <section class="box" id="cadastrarPet">
+                <!-- barra que contem o botão fechar -->
+                <div>
+                    <h4>cadastro do tutor</h4>
+                    <a href="#">X</a>
+                </div>
+                <form action="/pet" method="POST">
+                    <fieldset>
+                        <legend>dados do pet</legend>
+                        <label for='nomePet'>nome do pet</label>
+                        <input type="text" name="nomePet"  class="field-1" id="nomePet" maxlength="40" autocomplete="off" required>
+                        <br><br>
+                        <label for="idadePet">idade do pet</label>
+                        <input type="text" name="idadePet"  class="field-1" id="idadePet" maxlength="2" autocomplete="off" required>
+                        <br><br>
+                        <label for="sexoPet">sexo do pet</label>
+                        <br>
+                        <input type="radio" name="genero" value="m">macho
+                        <input type="radio" name="genero" value="f">fêmea
+                        <br><br>
+                        <label for="porte">porte</label>
+                        <br>
+                        <input type="radio" name="porte" value="p">pequeno
+                        <input type="radio" name="porte" value="m">médio
+                        <input type="radio" name="porte" value="g">grande
+                        <br><br>
+                        <label for="tipopet">tipo do pet</label>
+                        <select id="tipoPet" name="tipoPet" autocomplete="off" required>
+                            <option></option>
+                            <option value="cachorro">cachorro</option>
+                            <option value="gato">gato</option>
+                            <option value="furao">furão</option>
+                            <option value="coelho">coelho</option>
+                        </select>
+                        <br><br>
+                        <label for="raca">raça</label>
+                        <input type="text" class="field-1" id="raca" name="raca" autocomplete="off" required>
+                        <br><br>
+                        <label for="pulseira">pulseira</label>
+                        <input type="text" name="pulseira" autocomplete="off" class="field-1" maxlength="7" required>
+                    </fieldset>
+                    
+                    <button type="submit" class="btn-form" id="cad-pet">enviar</button>
+                </form>
+            </section>
+            
+            <!-- consultar -->
+            <section class="box" id="consultar">
+                <div>
+                    <h4>consulta</h4>
+                    <a href="#">X</a>
+                </div>
+                <form action="/consulta" method="POST">
+                    <fieldset class="query">
+                        <legend>consultado de dados</legend>
+                        <!--<label for="nome-pet">nome pet</label>
+                        <input type="text" name="pet" class="field-1">
+                        <br><br>-->
+                        <label for="num-pulseira">numero da pulseira</label>
+                        <input type="text" name="numPulseira" maxlength="7" class="field-1">
+                        <br><br>
+                    </fieldset>
+                    <button type="submit" class="btn-form" id="consulta">enviar</button>
+                </form>
+            </section>
+        </section>
+        <footer>
+            <p>&copy;Dennis J Carvalho</p>
+        </footer>
+
+    </main>
+
+<!--
+</body>
+
+</html>
+-->

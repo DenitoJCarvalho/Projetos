@@ -1,0 +1,247 @@
+/*Configuração universal*/
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Corpo */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Cabeçalho */
+
+header {
+    min-height: 500px;
+    background: url("../images/bg.jpg") bottom no-repeat;
+    background-size: cover;
+}
+
+header .bg-gradient {
+    min-height: 300px;
+    background: linear-gradient( to bottom, rgba(0, 0, 0, .65) 0%, rgba(0, 0, 0, 0)100%);
+    width: 100%;
+    display: flex;
+    background: -moz-linear-gradient( to bottom, rgba(0, 0, 0, .65) 0%, rgba(0, 0, 0, 0)100%);
+    background: -webkit-linear-gradient( to bottom, rgba(0, 0, 0, .65) 0%, rgba(0, 0, 0, 0)100%);
+    filter: progid: DXimageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+}
+
+header .header-border {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+    width: 100%;
+    height: 75px;
+}
+
+
+/* logo */
+
+header #logo {
+    width: 220px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 60px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 1) 1px 1px 8px;
+}
+
+
+/* menu */
+
+.menu {
+    flex: 1;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    min-width: 100px;
+    line-height: 28px;
+}
+
+.menu a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#register {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 400px;
+    max-width: 350px;
+    bottom: 0;
+    right: 10vw;
+    top: 20vh;
+    box-shadow: 0 0 2.1875rem rgba(140, 152, 164, 0.25);
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding: 20px;
+    color: rgba(51, 51, 51, 1);
+}
+
+#register p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+#register .field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#register input {
+    width: 100%;
+    padding: .7543m 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(231, 228, 228, 0.897);
+}
+
+#register input[type=radio] {
+    width: 25px;
+}
+
+#register button {
+    width: 100%;
+    border: none;
+    background-color: rgb(204, 133, 66);
+    color: rgba(255, 255, 255, 1);
+    padding: .75rem;
+    font-size: 1.2em;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    width: 100%;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+.title h1 {
+    font-size: 3em;
+    border-bottom: 1px solid rgba(51, 51, 51, 1);
+    padding-bottom: 1rem;
+}
+
+.home p {
+    text-align: justify;
+}
+
+footer {
+    background-color: rgb(245, 245, 245);
+    color: rgb(108, 117, 125);
+    font-size: 0.8em;
+}
+
+footer p {
+    line-height: 35px;
+}
+
+footer .container {
+    display: flex;
+}
+
+footer .menu a {
+    color: rgb(108, 117, 125);
+}
+
+.menu .open-menu {
+    display: none;
+}
+
+.backgdrop {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+
+@media(max-width: 450px) {
+    header .header-border {
+        justify-content: space-between;
+    }
+    .menu {
+        width: 80px;
+        flex: initial;
+    }
+    .menu ul {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -80vw;
+        width: 80vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 1);
+        z-index: 2;
+        transition: right .2s linear;
+    }
+    .menu.open ul {
+        right: 0;
+    }
+    .menu.open a {
+        color: rgba(0, 0, 0, 1);
+        padding: 20px;
+        display: block;
+        font-weight: 100;
+        border-bottom: rgba(204, 204, 204, 1);
+    }
+    .menu .open-menu {
+        display: block;
+        font-size: 2em;
+        padding: .9rem;
+        flex: 1;
+        border: none;
+        background: none;
+        color: rgba(255, 255, 255, 1);
+    }
+    .menu .close-menu {
+        display: block;
+        text-align: right;
+        background-color: rgba(238, 238, 238, 1);
+    }
+    .menu .close-menu button {
+        background: none;
+        border: none;
+        font-size: 2em;
+        padding: .75rem 1rem;
+    }
+    .menu.open .backdrop {
+        opacity: .5;
+        display: block;
+    }
+    .menu .backdrop {
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 1);
+        transition: opacity .15s linear;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        left: 0;
+    }
+    #register {
+        width: 90%;
+        margin: 0 5%;
+        max-width: initial;
+        right: initial;
+        top: 10vh;
+    }
+}

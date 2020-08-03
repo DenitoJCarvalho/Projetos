@@ -1,0 +1,23 @@
+
+<body class="result">
+    <section class="answer">
+        {{#each pets}}
+            <div>
+                <span>tutor:</span><p>{{tutor.nome}} {{tutor.sobrenome}}</p>
+                <span>nome do pet:</span><p>{{nome}}</p>
+                <span>idade do pet:</span><p>{{idade}}</p>
+                <span>sexo:</span><p>{{sexo}}</p>
+                <span>Porte:</span><p>{{porte}}</p>
+                <span>tipo:</span><p>{{tipo}}</p>
+                <span>raça:</span><p>{{raca}}</p>
+                <span>coordenadas:</span><p>{{coordenadas}}</p>
+                
+            </div>
+            {{else}}
+                <p class="msg">Não há registro deste Pet</p>
+        {{/each}}
+    </section>
+    <section class="btn-return">
+        <a href="/home#consultar">nova consulta</a>
+</section>
+</body>
