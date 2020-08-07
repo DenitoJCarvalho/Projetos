@@ -4,35 +4,43 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
 
 import './styles.css'
 
+export interface Teacher {
+    id: number
+    avatar: string
+    bio: string
+    cost: number
+    name: string
+    subject: string
+    whatsapp: string
+}
+interface TeacherItemProps {
+    teacher: Teacher
+}
 
-function TeacherItem(){
+const TeacherItem: React.FC<TeacherItemProps> = ({teacher}) => {
     return (
         <article className="teacher-item">
             <header>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI7M4Z0v1HP2Z9tZmfQaZFCuspezuoxter_A&usqp=CAU" alt="User" />
+                <img src={teacher.avatar} alt={teacher.name} />
                 <div>
-                    <strong>Teacher</strong>
-                    <span>Espanhol</span>
-                    <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ea officia perspiciatis, nostrum debitis aut consequuntur! Eligendi ipsum iusto in quos illum pariatur voluptatem est quas suscipit perferendis. Hic, unde!
-                    <br /><br />
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ea officia perspiciatis, nostrum debitis aut consequuntur! Eligendi ipsum iusto in quos illum pariatur voluptatem est quas suscipit perferendis. Hic, unde!
-                    </p>
-
-                    <footer>
-                        <p>
-                            Preço por hora
-                            <strong>
-                                R$100,00
-                            </strong>
-                        </p> 
-                        <button type="button">
-                            <img src={whatsappIcon} alt="Whatsapp" />
-                            Entrar em contato
-                        </button>
-                    </footer>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
                 </div>
             </header>
+
+            <p>{teacher.bio}</p>
+
+            <footer>
+                <p>
+                    Preço por hora
+                    <strong>R$ {teacher.cost}</strong>
+                </p> 
+                
+                <button type="button">
+                    <img src={whatsappIcon} alt="Whatsapp" />
+                    Entrar em contato
+                </button>
+            </footer>
         </article>
     )
 }

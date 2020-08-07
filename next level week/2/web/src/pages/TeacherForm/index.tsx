@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import PageHeader from '../../components/PageHeader'
 import Input from '../../components/input'
@@ -8,11 +9,13 @@ import Select from '../../components/Select'
 import warningIcon from '../../assets/images/icons/warning.svg'
 
 import './styles.css'
+import api from '../../services/api'
 
 
 
 function TeacherForm() {
 
+    const history = useHistory()
 
     const [name, setname] = useState('')
     const [avatar, setAvatar] = useState('')
@@ -37,12 +40,28 @@ function TeacherForm() {
 
     function handleCreateClass(e: FormEvent) {
         e.preventDefault()
+
+        api.post('classes',{
+            name, 
+            avatar,
+            whatsapp,
+            bio,
+            subject,
+            cost: Number(cost),
+            schedule: scheduleItem
+        }).then(() => {
+            alert('Cadastro realizado com sucesso.')
+
+            history.push('/')
+        }).catch(err => {
+            alert(`[ERROR]: ${err}`)
+        })
     }
 
     function setScheduleItemValue(index: number, field: string, value: string) {
         const updateScheduleItem = scheduleItem.map((scheduleItem, scheduleIndex) => {
             if (scheduleIndex === index) {
-                return { ... scheduleItem, [field]: value}
+                return { ...scheduleItem, [field]: value}
             }
 
             return scheduleItem
