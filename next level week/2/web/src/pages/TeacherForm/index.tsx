@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, FormEvent } from 'react'
 
 import PageHeader from '../../components/PageHeader'
 import Input from '../../components/input'
@@ -13,6 +13,16 @@ import './styles.css'
 
 function TeacherForm() {
 
+
+    const [name, setname] = useState('')
+    const [avatar, setAvatar] = useState('')
+    const [whatsapp, setWhatsapp] = useState('')
+    const [bio, setBio] = useState('')
+
+    const [subject, setSubject] = useState('')
+    const [cost, setCost] = useState('')
+
+
     const [ scheduleItem, setScheduleItem ] = useState([
         { week_day: 0, from: '', to: ''}
     ])
@@ -23,7 +33,22 @@ function TeacherForm() {
             ...scheduleItem,
             { week_day: 0, from: '', to: ''}
         ])
-        
+    }
+
+    function handleCreateClass(e: FormEvent) {
+        e.preventDefault()
+    }
+
+    function setScheduleItemValue(index: number, field: string, value: string) {
+        const updateScheduleItem = scheduleItem.map((scheduleItem, scheduleIndex) => {
+            if (scheduleIndex === index) {
+                return { ... scheduleItem, [field]: value}
+            }
+
+            return scheduleItem
+        })
+
+        setScheduleItem(updateScheduleItem)
     }
 
     return (
@@ -33,88 +58,137 @@ function TeacherForm() {
             />
 
             <main>
-                <fieldset>
-                    <legend>Seus dados</legend>
+                <form onSubmit={handleCreateClass}>
+                    <fieldset>
+                        <legend>Seus dados</legend>
 
-                    <Input name="name" label="Nome completo" />
-                    <Input name="avatar" label="Avatar" />
-                    <Input name="whatsapp" label="Whatsapp" />
+                        <Input 
+                            name="name" 
+                            label="Nome completo" 
+                            value={name} 
+                            onChange={(e) => {setname(e.target.value)} } 
+                        />
 
-                    <Textarea name="bio" label="Biografia" />
+                        <Input 
+                            name="avatar" 
+                            label="Avatar"
+                            value={avatar}
+                            onChange={(e) => { setAvatar(e.target.value)}}
+                        
+                        />
 
-                </fieldset>
+                        <Input 
+                            name="whatsapp" 
+                            label="Whatsapp" 
+                            value={whatsapp}
+                            onChange={(e) => { setWhatsapp(e.target.value)}}
+                        />
 
-                <fieldset>
-                    <legend> Sobre a aula</legend>
-                    
-                    <Select 
-                        name="subject" 
-                        label="Nome completo" 
-                        options={[
-                            { value: 'Artes',label: 'Artes' },
-                            { value: 'Biologia',label: 'Biologia' },
-                            { value: 'Ciências',label: 'Ciências' },
-                            { value: 'Educação Física',label: 'Educação Física' },
-                            { value: 'Física',label: 'Física' },
-                            { value: 'Geografia',label: 'Geografia' },
-                            { value: 'História',label: 'História' },
-                            { value: 'Matemática',label: 'Matemática' },
-                            { value: 'Portugês',label: 'Português' },
-                            { value: 'Química',label: 'Química' },
-                            { value: 'Inglês',label: 'Inglês' },
-                            { value: 'Espanhol',label: 'Espanhol' },
-                            { value: 'Linguagem e Alfabetização',label: 'Linguagem e Alfabetização' },
-                            { value: 'História/Geografia',label: 'História/Geografia' },
-                            { value: 'Ética e Cidadania',label: 'Ética e Cidadania' },
-                            { value: 'Robótica',label: 'Robótica' },
-                        ]}
-                    />
+                        <Textarea 
+                            name="bio" 
+                            label="Biografia" 
+                            value={bio}
+                            onChange={(e) => { setBio(e.target.value)}}
+                        
+                        />
 
-                    <Input name="cost" label="Custo da hora por aula." />
-                </fieldset>
+                    </fieldset>
 
-                <fieldset>
-                        <legend>
-                            Horários disponíveis
-                            <button type="button" onClick={addNewScheduleItem}> 
-                                + Novo horário 
-                            </button>
-                        </legend>
+                    <fieldset>
+                        <legend> Sobre a aula</legend>
+                        
+                        <Select 
+                            name="subject" 
+                            label="Nome completo" 
+                            value={subject}
+                            onChange={(e) => {setSubject(e.target.value)}}
+                            options={[
+                                { value: 'Artes',label: 'Artes' },
+                                { value: 'Biologia',label: 'Biologia' },
+                                { value: 'Ciências',label: 'Ciências' },
+                                { value: 'Educação Física',label: 'Educação Física' },
+                                { value: 'Física',label: 'Física' },
+                                { value: 'Geografia',label: 'Geografia' },
+                                { value: 'História',label: 'História' },
+                                { value: 'Matemática',label: 'Matemática' },
+                                { value: 'Portugês',label: 'Português' },
+                                { value: 'Química',label: 'Química' },
+                                { value: 'Inglês',label: 'Inglês' },
+                                { value: 'Espanhol',label: 'Espanhol' },
+                                { value: 'Linguagem e Alfabetização',label: 'Linguagem e Alfabetização' },
+                                { value: 'História/Geografia',label: 'História/Geografia' },
+                                { value: 'Ética e Cidadania',label: 'Ética e Cidadania' },
+                                { value: 'Robótica',label: 'Robótica' },
+                            ]}
+                        />
 
-                        {scheduleItem.map(item => {
-                            return (
-                                <div key={item.week_day} className="schedule-item">
-                                    <Select 
-                                        name="week_day" 
-                                        label="Dia da semana" 
-                                        options={[
-                                            { value: '0',label: 'Domingo' },
-                                            { value: '1',label: 'Segunda-Feira' },
-                                            { value: '2',label: 'Terça-Feira' },
-                                            { value: '3',label: 'Quarta-Feira' },
-                                            { value: '4',label: 'Quinta-Feira' },
-                                            { value: '5',label: 'Sexta-Feira' },
-                                            { value: '6',label: 'Sábado' }
-                                        ]}
-                                    />
+                        <Input 
+                            name="cost" 
+                            label="Custo da hora por aula." 
+                            value={cost}
+                            onChange={(e) => { setCost(e.target.value) }}
+                        />
 
-                                    <Input name="from" label="Das" type="time" />
-                                    <Input name="to" label="até" type="time" />
-                                </div>
-                            )
-                        })}
-                </fieldset>
+                    </fieldset>
 
-                <footer>
-                    <p>
-                        <img src={warningIcon} alt="Aviso importante" />
-                        Importante <br/>
-                        Preencha todos os dados.
-                    </p>
-                    <button type="button">
-                        Salvar cadastro
-                    </button>
-                </footer>
+                    <fieldset>
+                            <legend>
+                                Horários disponíveis
+                                <button type="button" onClick={addNewScheduleItem}> 
+                                    + Novo horário 
+                                </button>
+                            </legend>
+
+                            {scheduleItem.map((item, index) => {
+                                return (
+                                    <div key={item.week_day} className="schedule-item">
+                                        <Select 
+                                            name="week_day" 
+                                            label="Dia da semana" 
+                                            onChange={e => setScheduleItemValue(index, 'week_day', e.target.value)}
+                                            options={[
+                                                { value: '0',label: 'Domingo' },
+                                                { value: '1',label: 'Segunda-Feira' },
+                                                { value: '2',label: 'Terça-Feira' },
+                                                { value: '3',label: 'Quarta-Feira' },
+                                                { value: '4',label: 'Quinta-Feira' },
+                                                { value: '5',label: 'Sexta-Feira' },
+                                                { value: '6',label: 'Sábado' }
+                                            ]}
+                                        />
+
+                                        <Input 
+                                            name="from" 
+                                            label="Das" 
+                                            type="time" 
+                                            onChange={e => setScheduleItemValue(index, 'from', e.target.value)}
+
+                                        />
+
+                                        <Input 
+                                            name="to"
+                                            label="até"
+                                            type="time" 
+                                            onChange={e => setScheduleItemValue(index, 'from', e.target.value)}
+                                        />
+
+
+                                    </div>
+                                )
+                            })}
+                    </fieldset>
+
+                    <footer>
+                        <p>
+                            <img src={warningIcon} alt="Aviso importante" />
+                            Importante <br/>
+                            Preencha todos os dados.
+                        </p>
+                        <button type="submit">
+                            Salvar cadastro
+                        </button>
+                    </footer>
+                </form>
             </main>
             
         </div>
