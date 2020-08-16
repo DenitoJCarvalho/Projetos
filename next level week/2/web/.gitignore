@@ -24,3 +24,5 @@ yarn-error.log*
 
 #pastas ocultas
 desktop.ini
+
+.env
