@@ -1,7 +1,11 @@
 import React from 'react';
 import Menu from '../Menu';
 import Footer from '../Footer';
+// eslint-disable-next-line linebreak-style
+
 import styled from 'styled-components';
+
+
 
 const Main = styled.main`
   background-color: var(--black);
@@ -10,18 +14,14 @@ const Main = styled.main`
   padding-top: 50px;
   padding-left: 5%;
   padding-right: 5%;
-
-  ${{paddingAll}} => css `
-    padding: ${paddingAll};
-  `
 `;
 
 
-function PageDefault({ children, paddingAll }) {
+function PageDefault({ children }) {
   return (
     <>
       <Menu />
-        <Main paddingAll={paddingAll}>
+        <Main>
           {children}
         </Main>
       <Footer />

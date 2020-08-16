@@ -2,10 +2,10 @@ import { useState } from 'react'
 
 function useForm(valoresIniciais){
 
-    const [values, setValue] = useState(valoresIniciais)
+    const [values, setValues] = useState(valoresIniciais)
 
     function setValue(key, value){
-        setValue({
+        setValues({
         ...values,
         [key]: value
         })
