@@ -1,0 +1,36 @@
+/* coding: utf-8 */
+
+@media (max-width: 320px){
+    body {
+        background-color: var(--main-color);
+    }
+
+    .main {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        max-width: 100%;
+        margin-top: -124px;
+    }
+
+    .button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 21px;
+
+        margin-top: 88px;
+
+        text-decoration-line: underline;
+
+        color: var(--btn-light-grey);
+    }
+}
