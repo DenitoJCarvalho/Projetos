@@ -5,6 +5,7 @@ Criei este projeto com intuito de simular o registro de receitas que o MEI pede 
 --------------------
 
 ## Home
+<!--![Home](./src/assets/presentation/Home.png)-->
 <img src="./src/assets/presentation/Home.png" width="360" height="640">
 
 ## Main Box
