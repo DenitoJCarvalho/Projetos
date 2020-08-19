@@ -1,19 +1,47 @@
 import React from 'react' 
+import { Link } from 'react-router-dom'
 
-import logo from '../../assets/manager_mei_rojo 1 - smart.png'
+import Logo from '../../assets/logo_menu_web.png'
 
 import './styles.css' 
 
 
 const Navbar = () => {
     return(
-        <nav className="container">
-            <div className="brand">
-                <img src={logo} alt="logo" />
-            </div>
-            <div className="menuBurguer">
-                <i class="fas fa-bars"></i>
-            </div>
+        <nav className="navbar">
+            <ul>
+                <li>
+                    Menu
+                    <div className="container-menu">
+                        <div className="brand">
+                            <img src={Logo} alt="logo"/>
+                        </div>
+                        <ul>
+                            <li>
+                                <Link>
+                                    Início
+                                </Link>
+                            </li>
+                            <li>
+                                <Link>
+                                    Configurações
+                                </Link>
+                            </li>
+                            <li>
+                                <Link>
+                                    Registrar Receita
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <Link to="/MainBox">
+                        In&iacute;cio
+                    </Link>
+                </li>
+            </ul>
+            
         </nav>
     )
 }

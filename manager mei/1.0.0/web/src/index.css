@@ -2,6 +2,7 @@
 
 :root {
   --main-color: rgba(252, 7, 7, 1);
+  --second-color: rgba(255, 255, 255, 1);
   --btn-white: rgba(255, 255, 255, 1);
   --btn-light-grey:  rgba(229, 229, 229, 1);
 }
