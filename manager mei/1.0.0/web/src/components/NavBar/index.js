@@ -7,10 +7,27 @@ import './styles.css'
 
 
 const Navbar = () => {
+
+    const fadeMenu = () => {
+        let containerMenu = document.querySelector('.container-menu')
+        let menu = document.querySelector('#menu')
+
+        menu.addEventListener('mouseover', () => {
+            if(containerMenu.style.display === 'none'){
+                containerMenu.style.display = 'flex'
+            } else {
+                containerMenu.style.display = 'none'
+            }
+        })
+    }
+
     return(
         <nav className="navbar">
             <ul>
-                <li>
+                <li 
+                    id="menu"
+                    onClick={fadeMenu}
+                >
                     Menu
                     <div className="container-menu">
                         <div className="brand">
@@ -18,17 +35,17 @@ const Navbar = () => {
                         </div>
                         <ul>
                             <li>
-                                <Link>
+                                <Link to="/" className="btn-menu">
                                     Início
                                 </Link>
                             </li>
                             <li>
-                                <Link>
+                                <Link to="" className="btn-menu">
                                     Configurações
                                 </Link>
                             </li>
                             <li>
-                                <Link>
+                                <Link to="" className="btn-menu">
                                     Registrar Receita
                                 </Link>
                             </li>
@@ -36,7 +53,7 @@ const Navbar = () => {
                     </div>
                 </li>
                 <li>
-                    <Link to="/MainBox">
+                    <Link to="/" className="btn-secundary">
                         In&iacute;cio
                     </Link>
                 </li>

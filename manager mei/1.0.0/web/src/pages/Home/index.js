@@ -1,22 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import Navbar from '../../components/NavBar'
+import Box from '../../components/Box'
 
 
-//images
-import logo from '../../assets/manager_mei_rojo 2.png'
-
-//format
-import './styles.css'
+import './style.css'
 
 const Home = () => {
     return (
-        <div className="main">
-            <img src={logo} alt="logo" />
-
-            <Link 
-                to="/MainBox"  
-                className="btn">Entrar</Link>
-        </div>
+        <section className="container">
+            <Navbar />
+            <Box />
+        </section>
     )
 }
 
