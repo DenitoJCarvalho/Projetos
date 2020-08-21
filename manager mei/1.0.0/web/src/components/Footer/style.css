@@ -1,0 +1,30 @@
+/* coding: utf-8 */
+
+.footer {
+    border: 1px solid;
+    width: 100%;
+    height: 5rem;
+
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    background-image: url('../../assets/bg-footer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer p {
+    background-color: transparent;
+    color: var(--btn-light-grey);
+
+    width: 23.25rem;
+    height: 2.375rem;
+    padding: 0.5%;
+
+    font-weight: bold;
+    font-size: 0.750em;
+
+    text-align: center;
+}
