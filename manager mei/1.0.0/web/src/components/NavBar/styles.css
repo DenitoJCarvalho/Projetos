@@ -61,6 +61,7 @@
     position: absolute;
 
     border: 1px solid var(--btn-light-grey);
+    background-color: var(--second-color);
 
     width: 75%;
     height: 100vh;
