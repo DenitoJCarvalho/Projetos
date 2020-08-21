@@ -12,12 +12,10 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
-
-    border:1px solid;   
+   
 }
 
 .navbar ul {
-    border: 1px solid;
     position: relative;
     width: 25%;
     height: 100%;
@@ -35,7 +33,6 @@
 }
 
 .navbar ul li {
-    border: 1px solid;
     list-style-type: none;
     width: 120px;
     padding: 1%;
@@ -44,24 +41,39 @@
     cursor: pointer;
 }
 
+.navbar ul li#menu {
+    display: block;
+    
+}
+
+.navbar ul li .btn-secundary {
+    color: var(--btn-light-grey);
+
+    text-decoration: none;
+}
+
+.navbar ul li .btn-secundary:hover {
+    color: var(--btn-medium-grey);
+}
+
 
 .container-menu {
-    border: 1px solid #000000;
     position: absolute;
+
+    border: 1px solid var(--btn-light-grey);
 
     width: 75%;
     height: 100vh;
     left: 0;
     top: 0;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
 .container-menu .brand {
-    border: 1px solid #000;
     width: 100%;
     height: 170px;
 }
@@ -86,4 +98,15 @@
     width: 100%;
     padding: 3%;
 }
+
+.btn-menu{
+    text-decoration: none;
+
+    color: var(--main-color);
+}
+
+.btn-menu:hover {
+    color: var(--btn-light-grey);
+}
+
 
