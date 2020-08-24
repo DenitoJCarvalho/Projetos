@@ -6,7 +6,7 @@
     margin: 0 auto;
 
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: flex-start;
 }
