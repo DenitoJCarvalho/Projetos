@@ -43,8 +43,12 @@
 
 .navbar ul li#menu {
     display: block;
+<<<<<<< HEAD
     
 }
+=======
+} 
+>>>>>>> MainBox
 
 .navbar ul li .btn-secundary {
     color: var(--btn-light-grey);
@@ -52,7 +56,12 @@
     text-decoration: none;
 }
 
+<<<<<<< HEAD
 .navbar ul li .btn-secundary:hover {
+=======
+.navbar ul li .btn-secundary:hover, 
+.navbar ul li#menu:hover {
+>>>>>>> MainBox
     color: var(--btn-medium-grey);
 }
 
