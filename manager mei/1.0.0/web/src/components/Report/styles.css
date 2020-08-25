@@ -1,0 +1,46 @@
+/* coding: utf-8 */
+
+.report {
+    background-color: var(--btn-light-grey);
+    width: 1030px;
+    height: 6.25rem;
+    padding: 19px 30px 17px 30px;
+
+    border-left: 5px solid var(--main-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.report div {
+    width: 60.625rem;
+    height: 1.6875rem;
+    padding: 5px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.report :nth-child(2){
+    height: 2.5rem;
+}
+
+.report p {
+    font-weight: bold;
+}
+
+.report .value {
+    width: 240px;
+    height: 100%;
+    padding-left: 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-weight: bold;
+
+    color: var(--font-color-data);
+}

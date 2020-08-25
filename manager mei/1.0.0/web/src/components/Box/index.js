@@ -1,8 +1,8 @@
 import React from 'react'
 
-
 import Header from '../Header'
 import ContentMain from '../ContentMain'
+import Report from '../Report'
 
 import './style.css'
 
@@ -16,7 +16,7 @@ const Box = () => {
                 label1="C/ nota fiscal"
                 label2="S/ nota fiscal"
                 label3="Total das revendas"
-                nameButton="Inserir"    
+                name="Inserir"    
             />
 
             <ContentMain 
@@ -24,7 +24,7 @@ const Box = () => {
                 label1="C/ nota fiscal"
                 label2="S/ nota fiscal"
                 label3="Total das vendas"
-                nameButton="Inserir"    
+                name="Inserir"    
             />
 
             <ContentMain 
@@ -32,8 +32,10 @@ const Box = () => {
                 label1="C/ nota fiscal"
                 label2="S/ nota fiscal"
                 label3="Total prest.serviço"    
-                nameButton="Inserir"
+                name="Inserir"
             />
+
+            <Report />
 
         </section>
     )

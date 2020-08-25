@@ -2,6 +2,7 @@ import React from 'react'
 
 
 import './style.css'
+import Button from '../Button'
 
 const ContentMain = (props) => {
 
@@ -18,7 +19,7 @@ const ContentMain = (props) => {
             <label>{props.label3}</label>
             <div>{`R$${valueDefault}`}</div>
 
-            <button>{props.nameButton}</button>
+            <Button name={props.name}/>
         </section>
 
     )

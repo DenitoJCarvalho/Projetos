@@ -13,7 +13,6 @@ const Home = () => {
             <Navbar />
             <Box />
             <Footer />
-            
         </section>
     )
 }
