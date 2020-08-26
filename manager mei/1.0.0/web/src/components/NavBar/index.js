@@ -8,11 +8,11 @@ import './styles.css'
 
 const Navbar = () => {
 
-    const fadeMenu = () => {
+    const openMenu = () => {
         let containerMenu = document.querySelector('.container-menu')
         let menu = document.querySelector('#menu')
 
-        menu.addEventListener('mouseover', () => {
+        menu.addEventListener('click', () => {
             if(containerMenu.style.display === 'none'){
                 containerMenu.style.display = 'flex'
             } else {
@@ -21,12 +21,24 @@ const Navbar = () => {
         })
     }
 
+    /*
+    const closeMenu = () => {
+        let containerMenu = document.querySelector('.container-menu')
+        let btn = document.querySelector('#close')
+        btn.addEventListener('click', () => {
+            if(containerMenu.style.display === 'flex'){
+                containerMenu.style.display = 'none'
+            } 
+            
+        })
+    }*/
+
     return(
         <nav className="navbar">
             <ul>
                 <li 
                     id="menu"
-                    onClick={fadeMenu}
+                    onClick={openMenu}
                 >
                     Menu
                     <div className="container-menu">
@@ -47,6 +59,15 @@ const Navbar = () => {
                             <li>
                                 <Link to="" className="btn-menu">
                                     Registrar Receita
+                                </Link>
+                            </li>
+                            <li>
+                                <Link 
+                                    className="btn-menu"
+                                    id="close"   
+                                    /*onClick={closeMenu}*/ 
+                                >
+                                    Fechar
                                 </Link>
                             </li>
                         </ul>

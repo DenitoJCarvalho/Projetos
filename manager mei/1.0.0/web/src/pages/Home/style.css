@@ -2,7 +2,7 @@
 
 .container{
     width: 100vw;
-    height: 100vh;
+    height: 56.25rem;
 
     display: flex;
     flex-direction: column;
@@ -10,4 +10,5 @@
     align-items: center;
 
     background-color: var(--second-color);
+
 }
