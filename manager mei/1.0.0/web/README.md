@@ -1,7 +1,7 @@
 # Manager MEI  
 
 
-Criei este projeto com intuito de simular o registro de receitas que o MEI pede para os microempreendedores. Normalmente é passado uma planilha para preencher mensalmente. No entanto, com essa aplicação é possível automatizar esse processo.
+Projeto com intuito de simular o registro de receitas que o MEI pede para os microempreendedores. Normalmente é passado uma planilha para preencher mensalmente. No entanto, com essa aplicação é possível automatizar esse processo.
 --------------------
 
 
@@ -20,3 +20,7 @@ Criei este projeto com intuito de simular o registro de receitas que o MEI pede 
 
 
 ---
+
+
+#### Menu
+<img src="./src/assets/presentation/Menu.png" />
