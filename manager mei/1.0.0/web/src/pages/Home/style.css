@@ -2,11 +2,7 @@
 
 .container{
     width: 100vw;
-<<<<<<< HEAD
     height: 100vh;
-=======
-    height: 56.25rem;
->>>>>>> MainBox
 
     display: flex;
     flex-direction: column;
@@ -14,8 +10,4 @@
     align-items: center;
 
     background-color: var(--second-color);
-<<<<<<< HEAD
-=======
-
->>>>>>> MainBox
 }

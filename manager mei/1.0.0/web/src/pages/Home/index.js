@@ -13,10 +13,7 @@ const Home = () => {
             <Navbar />
             <Box />
             <Footer />
-<<<<<<< HEAD
             
-=======
->>>>>>> MainBox
         </section>
     )
 }
