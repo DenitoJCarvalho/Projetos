@@ -27,3 +27,16 @@
 
     text-align: center;
 }
+
+@media (max-width: 320px) {
+    .footer {
+        background-image: none;
+        background-color: var(--main-color);
+    }
+
+    .footer p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -41,6 +41,14 @@
     cursor: pointer;
 }
 
+.navbar div.logoMobile {
+    display: none;
+}
+
+.navbar ul div.menuMobile {
+    display: none;
+}
+
 .navbar ul li#menu {
     display: block;
 } 
@@ -108,4 +116,56 @@
 
 .btn-menu:hover {
     color: var(--btn-light-grey);
+}
+
+@media (max-width: 320px){
+    .navbar{
+        background-color: var(--main-color);
+        background-image: none;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50px;
+    }
+
+    .navbar ul li#menu, .navbar .btn-secundary {
+        display: none;
+    }
+
+    .navbar div.logoMobile {
+        display: block;
+        
+        height: 100%;
+    }
+
+    .navbar div.logoMobile img {
+        width: 100%;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: flex-end;
+        width: 10%;
+    }
+
+    .navbar ul div.menuMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 25%;
+        height: 100%;
+    }
+
+    .navbar ul div.menuMobile i {
+        font-size: 1.5em;
+    }
+
+    .container-menu {
+        background-color: greenyellow;
+        border: 1px solid;
+        display: flex;
+        z-index: 3;
+    }
 }
