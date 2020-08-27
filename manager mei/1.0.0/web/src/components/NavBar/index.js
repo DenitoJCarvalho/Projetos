@@ -43,11 +43,12 @@ const Navbar = () => {
                 <img src={LogoMobile} alt="logo mobile"/>
             </div>
 
+            {/* menuburguer mobile */}
+            <div className="menuMobile" id="menuMobile" onClick={openMenuMobile} >
+                <i className="fas fa-bars"></i>
+            </div>
+
             <ul>
-                {/* menuburguer mobile */}
-                <div className="menuMobile" id="menuMobile" onClick={openMenuMobile} >
-                    <i className="fas fa-bars"></i>
-                </div>
                 <li id="menu" onClick={openMenu}>
                     Menu
                     <div className="container-menu">
