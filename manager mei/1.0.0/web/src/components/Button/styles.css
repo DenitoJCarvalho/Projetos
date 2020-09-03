@@ -22,3 +22,11 @@
     opacity: .7;
     color:var(--second-color);
 }
+
+@media (max-width: 320px) {
+    .btn {
+        width: 7.5rem;
+        height: 1.75rem;
+        font-size: 0.750em;
+    }
+}

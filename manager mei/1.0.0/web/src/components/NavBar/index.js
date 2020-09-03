@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import Logo from '../../assets/logo_menu_web.png'
+import LogoMobile from '../../assets/manager_mei_rojo 1 mobile.png'
 
 import './styles.css' 
 
@@ -11,6 +12,7 @@ const Navbar = () => {
     const openMenu = () => {
         let containerMenu = document.querySelector('.container-menu')
         let menu = document.querySelector('#menu')
+        
 
         menu.addEventListener('click', () => {
             if(containerMenu.style.display === 'none'){
@@ -21,25 +23,33 @@ const Navbar = () => {
         })
     }
 
-    /*
-    const closeMenu = () => {
+    const openMenuMobile = () => {
         let containerMenu = document.querySelector('.container-menu')
-        let btn = document.querySelector('#close')
-        btn.addEventListener('click', () => {
-            if(containerMenu.style.display === 'flex'){
+        let menuMobile = document.querySelector('#menuMobile')
+
+        menuMobile.addEventListener('click', () => {
+            if(containerMenu.style.display === 'none'){
+                containerMenu.style.display = 'flex'
+            } else {
                 containerMenu.style.display = 'none'
-            } 
-            
+            }
         })
-    }*/
+    }
 
     return(
         <nav className="navbar">
+            {/* Brand mobile */}
+            <div className="logoMobile">
+                <img src={LogoMobile} alt="logo mobile"/>
+            </div>
+
+            {/* menuburguer mobile */}
+            <div className="menuMobile" id="menuMobile" onClick={openMenuMobile} >
+                <i className="fas fa-bars"></i>
+            </div>
+
             <ul>
-                <li 
-                    id="menu"
-                    onClick={openMenu}
-                >
+                <li id="menu" onClick={openMenu}>
                     Menu
                     <div className="container-menu">
                         <div className="brand">

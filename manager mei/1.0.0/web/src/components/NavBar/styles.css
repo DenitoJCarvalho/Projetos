@@ -41,6 +41,14 @@
     cursor: pointer;
 }
 
+.navbar div.logoMobile {
+    display: none;
+}
+
+.navbar div.menuMobile {
+    display: none;
+}
+
 .navbar ul li#menu {
     display: block;
 } 
@@ -108,4 +116,63 @@
 
 .btn-menu:hover {
     color: var(--btn-light-grey);
+}
+
+@media (max-width: 320px){
+    .navbar{
+        background-color: var(--main-color);
+        background-image: none;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        height: 3.125rem;
+    }
+
+    .navbar ul li#menu, .navbar .btn-secundary {
+        display: none;
+    }
+
+    .navbar div.logoMobile {
+        display: block;
+        
+        border: 1px solid;
+        width: 5.4375rem;
+        height: 100%;
+    }
+
+    .navbar div.logoMobile img {
+        width: 100%;
+    }
+
+    .navbar div.menuMobile {
+        border: 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+        width: 25%;
+    }
+
+    .navbar div.menuMobile i {
+        font-size: 1.5em;
+        color: var(--second-color);
+    }
+
+    .navbar ul {
+        border: 1px solid #000;
+        position: absolute;
+        display: flex;
+
+        width: 100%;
+        height: 400px;
+
+        background-color: var(--second-color);
+    }
+
+    .navbar ul div.container-menu {
+        border: 1px solid;
+    }
+
 }
