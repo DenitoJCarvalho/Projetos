@@ -5,7 +5,6 @@ import React from 'react'
 import FormConfig from '../../Forms/Config'
 
 //Css
-import '../style.css'
 import './style.css'
 
 const BoxConfig = () => {

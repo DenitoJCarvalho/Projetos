@@ -1,0 +1,88 @@
+/* coding: utf-8 */
+
+.container-form-config {
+    width: 73.125rem;
+    height: 46.25rem;
+    padding: 25px 70px 0 70px;
+}
+
+.container-form-config form {
+    border: 1px solid var(--btn-light-grey);
+    border-left: 5px solid var(--main-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--btn-light-grey);
+
+    width: 64.375rem;
+    height: 26.875rem;
+    padding: 25px 30px 50px 25px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container-form-config form div {
+    width: 60.625rem;
+    height: 7.25rem;
+    padding: 30px 30px;
+}
+
+.container-form-config form div label {
+    font-weight: bold;
+    font-size: 0.875em;
+}
+
+.container-form-config form div small {
+    margin-left: 0.2rem;
+
+    color: var(--main-color);
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.container-form-config div small#noteName:hover:after {
+    content: 'Procure inserir o nome completo, caso não dê, abrevie o segundo nome';
+
+    margin-left: 0.2rem;
+
+    width: 30rem;
+
+    letter-spacing: 1px;
+
+    font-weight: 500;
+}
+
+.container-form-config div small#noteCnpj:hover:after {
+    content: 'Digite apenas números sem espaços e pontos';
+
+    margin-left: 0.2rem;
+
+    width: 30rem;
+
+    letter-spacing: 1px;
+
+    font-weight: 500;
+}
+
+
+.container-form-config form div input[type=text] {
+    border: none;
+    border-radius: 4px;
+    
+    width: 50rem;
+    height: 2rem;
+    padding: 1px;
+
+    background-color: var(--second-color);
+    color: var(--font-color-data);
+
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    outline: none;
+
+    font-weight: 600;
+    font-size: 0.875em;
+
+    text-indent: 5px;
+}

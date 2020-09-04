@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Header from '../Header'
-import ContentMain from '../ContentMain'
-import Report from '../Report'
+import Header from '../../Header'
+import ContentMain from '../../ContentMain'
+import Report from '../../Report'
 
 import './style.css'
 
 
-const Box = () => {
+const BoxHome = () => {
     return (
         <section className="box">
             <Header />
@@ -15,7 +15,8 @@ const Box = () => {
                 title="Revenda de Mercadoria"
                 label1="C/ nota fiscal"
                 label2="S/ nota fiscal"
-                label3="Total das revendas"    
+                label3="Total das revendas" 
+                href=""   
             />
 
             <ContentMain 
@@ -23,7 +24,8 @@ const Box = () => {
                 label1="C/ nota fiscal"
                 label2="S/ nota fiscal"
                 label3="Total das vendas"
-                name="Inserir"    
+                name="Inserir"  
+                href=""  
             />
 
             <ContentMain 
@@ -32,6 +34,7 @@ const Box = () => {
                 label2="S/ nota fiscal"
                 label3="Total prest.serviço"    
                 name="Inserir"
+                href=""
             />
 
             <Report />
@@ -40,4 +43,4 @@ const Box = () => {
     )
 }
 
-export default Box
+export default BoxHome

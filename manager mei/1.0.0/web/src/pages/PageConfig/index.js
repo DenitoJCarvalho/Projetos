@@ -3,15 +3,13 @@ import React from 'react'
 //components
 import Navbar from '../../components/NavBar'
 import Footer from '../../components/Footer'
-import BoxConfig from '../../components/Box/BoxConfig/'
+import BoxConfig from '../../components/Box/BoxConfig'
 
-//CSS
-import './style.css'
-
+import './styles.css'
 
 const Config = () => {
     return (
-        <section>
+        <section className="container-config">
             <Navbar 
                 nameBtnSecundary = "Configura&ccedil;&atilde;o"
             />

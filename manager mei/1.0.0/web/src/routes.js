@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from  'react-router-dom'
 
 //pages
 import Home from './pages/Home'
-import Config from './pages/Config'
+import Config from './pages/PageConfig'
 
 
 const Routes = () => {

@@ -9,35 +9,49 @@ import './style.css'
 
 const FormConfig = () => {
     return (
-        <form>
-            <label htmlFor="empreendedor">
-                Nome do empreendedor
-            </label>
-            <br/>
-            <input 
-                type="text"
-                name="empreendedor"
-                required
-            />
-            <br/><br/>
-
-            <label htmlFor="cnpj">
-                CNPJ
-            </label>
-            <br/>
-            <input 
-                type="text"
-                name="cnpj"
-                required
-            />
-            <br/><br/>
-
-            <Button
-                title="Inserir"
-                name="insert"
-            >
-            </Button>
-        </form>
+        <section className="container-form-config">
+            <form>
+                <div>
+                    <label htmlFor="empreendedor">
+                        Nome do empreendedor
+                    </label>
+                    <small id="noteName">
+                        * 
+                    </small>
+                    <br/>
+                    <input 
+                        type="text"
+                        name="empreendedor"
+                        maxLength="50"
+                        minLength="2"
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="cnpj">
+                        CNPJ
+                    </label>
+                    <small id="noteCnpj">
+                        * 
+                    </small>
+                    <br/>
+                    <input 
+                        type="text"
+                        name="cnpj"
+                        maxLength="11"
+                        minLength="11"
+                        required
+                    />
+                </div>
+                <div>
+                    <Button
+                        name="inserir"
+                    >
+                        Inserir
+                    </Button>
+                </div>
+            </form>
+        </section>
     )
 }
 

@@ -2,13 +2,13 @@ import React from 'react'
 
 import './styles.css'
 
-const Button = ({title, name}) => {
+const Button = (props) => {
     return (
         <button 
             className="btn"
-            name={name}    
+            name={props.name}    
         >
-            {title}
+            {props.children}
         </button>
     )
 }
