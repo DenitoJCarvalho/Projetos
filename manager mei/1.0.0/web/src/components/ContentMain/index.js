@@ -1,8 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 import './style.css'
-import Button from '../Button'
 
 const ContentMain = (props) => {
 
@@ -12,14 +12,32 @@ const ContentMain = (props) => {
         <section className="container-content-main">
             <h3>{props.title}</h3>
             
-            <label>{props.label1}</label>
-            <div>{`R$${valueDefault}`}</div>
-            <label>{props.label2}</label>
-            <div>{`R$${valueDefault}`}</div>
-            <label>{props.label3}</label>
-            <div>{`R$${valueDefault}`}</div>
+            <label>
+                {props.label1}
+            </label>
+            <div>
+                {`R$${valueDefault}`}
+            </div>
+            <label>
+                {props.label2}
+            </label>
+            <div>
+                {`R$${valueDefault}`}
+            </div>
+            <label>
+                {props.label3}
+            </label>
+            <div>
+                {`R$${valueDefault}`}
+            </div>
 
-            <Button name={props.name}/>
+            <Link 
+                to={props.href}
+                className="btn link-btn"
+            >
+                Inserir
+            </Link>
+            
         </section>
 
     )

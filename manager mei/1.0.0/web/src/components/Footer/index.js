@@ -2,10 +2,10 @@ import React from 'react'
 
 import './style.css'
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer className="footer">
-            <p>Desenvolvido por Dennis J Carvalho</p>
+            <p>{props.paragraph}</p>
         </footer>
     )
 }

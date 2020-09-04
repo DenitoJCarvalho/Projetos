@@ -4,7 +4,7 @@ import Button from '../Button'
 
 import './styles.css'
 
-const Report = () => {
+const Report = (props) => {
 
     // eslint-disable-next-line
     const [ valueInitial, setValueInitial ] = useState('0,00')
@@ -21,7 +21,9 @@ const Report = () => {
                 </output>
             </div>
             <div>
-                <Button name="Gerar Relatório" />
+                <Button name="relatorio">
+                    Gerar Relatório
+                </Button>
             </div>
         </section>
     )

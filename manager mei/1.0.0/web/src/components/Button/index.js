@@ -4,8 +4,11 @@ import './styles.css'
 
 const Button = (props) => {
     return (
-        <button className="btn">
-            {props.name}
+        <button 
+            className="btn"
+            name={props.name}    
+        >
+            {props.children}
         </button>
     )
 }
