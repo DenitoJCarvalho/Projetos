@@ -1,25 +1,26 @@
 import React from 'react'
 
+//components
 import Navbar from '../../components/NavBar'
-import Box from '../../components/Box'
 import Footer from '../../components/Footer'
+import BoxConfig from '../../components/Box/BoxConfig/'
 
-
+//CSS
 import './style.css'
 
-const Home = () => {
+
+const Config = () => {
     return (
-        <section className="container">
+        <section>
             <Navbar 
-                nameBtnSecundary="In&iacute;cio"
+                nameBtnSecundary = "Configura&ccedil;&atilde;o"
             />
-            <Box />
-            <Footer
+            <BoxConfig />
+            <Footer 
                 paragraph="Desenvolvido por Dennis J Carvalho"
             />
-            
         </section>
     )
 }
 
-export default Home
+export default Config

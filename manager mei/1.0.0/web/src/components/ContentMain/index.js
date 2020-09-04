@@ -19,7 +19,7 @@ const ContentMain = (props) => {
             <label>{props.label3}</label>
             <div>{`R$${valueDefault}`}</div>
 
-            <Button name={props.name}/>
+            <Button />
         </section>
 
     )

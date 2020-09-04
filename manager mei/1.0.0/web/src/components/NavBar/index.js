@@ -7,7 +7,7 @@ import LogoMobile from '../../assets/manager_mei_rojo 1 mobile.png'
 import './styles.css' 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     const openMenu = () => {
         let containerMenu = document.querySelector('.container-menu')
@@ -36,6 +36,8 @@ const Navbar = () => {
         })
     }
 
+    
+
     return(
         <nav className="navbar">
             {/* Brand mobile */}
@@ -57,12 +59,18 @@ const Navbar = () => {
                         </div>
                         <ul>
                             <li>
-                                <Link to="/" className="btn-menu">
+                                <Link 
+                                    to="/" 
+                                    className="btn-menu"
+                                >
                                     Início
                                 </Link>
                             </li>
                             <li>
-                                <Link to="" className="btn-menu">
+                                <Link 
+                                    to="/config" 
+                                    className="btn-menu"
+                                >
                                     Configurações
                                 </Link>
                             </li>
@@ -85,7 +93,8 @@ const Navbar = () => {
                 </li>
                 <li>
                     <Link to="/" className="btn-secundary">
-                        In&iacute;cio
+                        {props.nameBtnSecundary}
+                        {/*In&iacute;cio*/}
                     </Link>
                 </li>
             </ul>

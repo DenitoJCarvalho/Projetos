@@ -15,8 +15,7 @@ const Box = () => {
                 title="Revenda de Mercadoria"
                 label1="C/ nota fiscal"
                 label2="S/ nota fiscal"
-                label3="Total das revendas"
-                name="Inserir"    
+                label3="Total das revendas"    
             />
 
             <ContentMain 
