@@ -1,0 +1,12 @@
+/*coding: utf-8*/
+
+.box-register {
+    width: 73.125rem;
+    height: 46.25rem;
+    padding: 25px 70px 145px 70px;
+
+    margin:auto;
+
+    background-color: var(--second-color);
+    
+}

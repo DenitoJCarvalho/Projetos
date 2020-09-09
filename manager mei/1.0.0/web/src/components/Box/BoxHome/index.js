@@ -16,7 +16,7 @@ const BoxHome = () => {
                 label1="C/ nota fiscal"
                 label2="S/ nota fiscal"
                 label3="Total das revendas" 
-                href=""   
+                href="/register-value"   
             />
 
             <ContentMain 
@@ -25,7 +25,7 @@ const BoxHome = () => {
                 label2="S/ nota fiscal"
                 label3="Total das vendas"
                 name="Inserir"  
-                href=""  
+                href="/register-value"  
             />
 
             <ContentMain 
@@ -34,7 +34,7 @@ const BoxHome = () => {
                 label2="S/ nota fiscal"
                 label3="Total prest.serviço"    
                 name="Inserir"
-                href=""
+                href="/register-value"
             />
 
             <Report />

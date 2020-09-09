@@ -75,7 +75,7 @@ const Navbar = (props) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="" className="btn-menu">
+                                <Link to="/register-value" className="btn-menu">
                                     Registrar Receita
                                 </Link>
                             </li>
