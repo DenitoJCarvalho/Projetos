@@ -92,10 +92,10 @@ const Navbar = (props) => {
                     </div>
                 </li>
                 <li>
-                    <Link to="/" className="btn-secundary">
+                    <h3 className="btn-secundary">
                         {props.nameBtnSecundary}
                         {/*In&iacute;cio*/}
-                    </Link>
+                    </h3>
                 </li>
             </ul>
             
