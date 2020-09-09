@@ -94,7 +94,7 @@
 
     cursor: pointer;
 
-    background-color: var(--btn-medium-grey);
+    background-color: var(--btn-light-medium-grey);
 }
 
 .register div input[type=submit]:hover {
