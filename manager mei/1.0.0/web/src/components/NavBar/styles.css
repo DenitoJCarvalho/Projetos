@@ -49,7 +49,7 @@
     display: none;
 }
 
-.navbar ul li#menu {
+.navbar ul li span#menu {
     display: block;
 } 
 
@@ -60,15 +60,14 @@
 }
 
 .navbar ul li .btn-secundary:hover, 
-.navbar ul li#menu:hover {
+.navbar ul li span#menu:hover {
     color: var(--btn-medium-grey);
 }
 
 
-.container-menu {
+.container-menu div {
     position: absolute;
 
-    border: 1px solid var(--btn-light-grey);
     background-color: var(--second-color);
 
     width: 75%;
@@ -82,7 +81,8 @@
     align-items: center;
 }
 
-.container-menu .brand {
+.container-menu div.brand {
+    display: flex;
     width: 100%;
     height: 170px;
 }
@@ -93,15 +93,18 @@
     margin: 0;
 }
 
-.container-menu ul {
+.container-menu div ul {
+    border: none;
+
     width: 100%;
     height: auto;
+    top: 23%;
 
     display: flex;
     flex-direction: column;
 }
 
-.container-menu ul li {
+.container-menu div ul li {
     border: none;
     border-bottom: 2px solid var(--main-color);
     width: 100%;
@@ -127,16 +130,12 @@
         flex-flow: row wrap;
         justify-content: space-between;
         height: 3.125rem;
-    }
-
-    .navbar ul li#menu, .navbar .btn-secundary {
-        display: none;
+        width: 100%;
     }
 
     .navbar div.logoMobile {
         display: block;
         
-        border: 1px solid;
         width: 5.4375rem;
         height: 100%;
     }
@@ -146,13 +145,14 @@
     }
 
     .navbar div.menuMobile {
-        border: 1px solid;
         display: flex;
         justify-content: center;
         align-items: center;
 
         height: 100%;
-        width: 25%;
+        width: 15%;
+        
+        margin-left: 40%;
     }
 
     .navbar div.menuMobile i {
@@ -161,18 +161,38 @@
     }
 
     .navbar ul {
-        border: 1px solid #000;
         position: absolute;
-        display: flex;
+
+        display: none;
+        flex-direction: column;
 
         width: 100%;
-        height: 400px;
+        height: 100%;
+        top: 0;
 
-        background-color: var(--second-color);
+        background-color: white;
+        z-index: 3;
     }
 
-    .navbar ul div.container-menu {
-        border: 1px solid;
+    .navbar ul li span#menu,
+    .navbar ul li .btn-secundary {
+        display: none;
     }
+
+    .container-menu div{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 3;
+    }
+    .container-menu div.brand {
+        height: auto;
+    }
+
+    .container-menu div ul {
+        top: 28%;
+    }
+
 
 }

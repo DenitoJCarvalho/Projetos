@@ -32,6 +32,9 @@
     .footer {
         background-image: none;
         background-color: var(--main-color);
+        
+        width: 100%;
+        height: 3.125rem;
     }
 
     .footer p {

@@ -10,10 +10,9 @@ import './styles.css'
 const Navbar = (props) => {
 
     const openMenu = () => {
-        let containerMenu = document.querySelector('.container-menu')
+        let containerMenu = document.querySelector('.container-menu div')
         let menu = document.querySelector('#menu')
         
-
         menu.addEventListener('click', () => {
             if(containerMenu.style.display === 'none'){
                 containerMenu.style.display = 'flex'
@@ -23,20 +22,29 @@ const Navbar = (props) => {
         })
     }
 
-    const openMenuMobile = () => {
-        let containerMenu = document.querySelector('.container-menu')
-        let menuMobile = document.querySelector('#menuMobile')
+    const closeMenu = () => {
+        let containerMenu = document.querySelector('.container-menu div')
+        let close = document.querySelector('#close')
+        let menu = document.querySelector('.container-menu')
 
-        menuMobile.addEventListener('click', () => {
-            if(containerMenu.style.display === 'none'){
-                containerMenu.style.display = 'flex'
-            } else {
-                containerMenu.style.display = 'none'
-            }
+        close.addEventListener('click', () => {
+            containerMenu.style.display = 'none'
+        })
+
+        close.addEventListener('click', () => {
+            menu.style.display = 'none'
         })
     }
 
-    
+    const openMenuMobile = () => {
+        let menuMobile = document.querySelector('#menuMobile')
+        let menu = document.querySelector('.container-menu')
+
+        menuMobile.addEventListener('click', () => {
+            menu.style.display = 'flex'
+        })
+        
+    }
 
     return(
         <nav className="navbar">
@@ -50,10 +58,12 @@ const Navbar = (props) => {
                 <i className="fas fa-bars"></i>
             </div>
 
-            <ul>
-                <li id="menu" onClick={openMenu}>
-                    Menu
-                    <div className="container-menu">
+            <ul className="container-menu">
+                <li>
+                    <span id="menu" onClick={openMenu}>
+                        Menu
+                    </span>
+                    <div>
                         <div className="brand">
                             <img src={Logo} alt="logo"/>
                         </div>
@@ -83,7 +93,7 @@ const Navbar = (props) => {
                                 <Link 
                                     className="btn-menu"
                                     id="close"   
-                                    /*onClick={closeMenu}*/ 
+                                    onClick={closeMenu} 
                                 >
                                     Fechar
                                 </Link>

@@ -10,5 +10,10 @@
     align-items: center;
 
     background-color: var(--second-color);
+}
 
+@media (max-width: 320px) {
+    .container-config {
+        height: 100vh;
+    }
 }

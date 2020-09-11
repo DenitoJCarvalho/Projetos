@@ -2,6 +2,14 @@
 
 .container-register-values {
     width: 100%;
-    height: 56.25rem;
+    height: 100vh;
+
 }
+
+@media (max-width: 320px) {
+    .container-register-values {
+        height: 100vh;
+    }
+}
+
 

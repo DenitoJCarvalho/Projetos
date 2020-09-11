@@ -56,16 +56,28 @@
 @media (max-width: 320px) {
     .header {
         width: 100%;
-        height: 150px;
-        padding: 22px 11px ;
+        height: 210px;
+        padding: 22px 11px;
     }
 
     .header div {
         width: 100%;
+        height: 3.5rem;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     .header div label {
+        width: 100%;
+
+        justify-content: center;
+
         font-size: 0.750em;
     }
+
+    
      
 }

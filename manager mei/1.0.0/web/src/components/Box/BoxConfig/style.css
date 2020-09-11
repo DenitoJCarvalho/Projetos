@@ -1,2 +1,7 @@
 /* coding: utf-8*/
 
+@media (max-width: 320px) {
+    .box {
+        max-width: 100%;
+    }
+}

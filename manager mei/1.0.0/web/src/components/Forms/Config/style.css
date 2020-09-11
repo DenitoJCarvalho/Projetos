@@ -86,3 +86,52 @@
 
     text-indent: 5px;
 }
+
+@media (max-width: 320px) {
+    .container-form-config {
+        width: 100%;
+        height: 33.875rem;
+        padding: 0;
+    }
+
+    .container-form-config form {
+        width: 100%;
+        height: 32.1875rem;
+        padding: 10px 10px 20px 10px;
+    }
+
+    .container-form-config form div {
+        width: 100%;
+        height: 60px;
+        padding: 0;
+        
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-form-config form div:nth-child(2) {
+        margin-top: 1.25rem;
+    }
+
+    .container-form-config form div:nth-child(3) {
+        margin-top: 11.125rem;
+    }
+
+    .container-form-config form div label {
+        font-size: 0.750em;
+    }
+
+    .container-form-config form div small {
+        display: none;
+    }
+
+    .container-form-config form div input[type=text] {
+        width: 100%;
+        height: 1.875rem;
+
+        
+    }
+}
