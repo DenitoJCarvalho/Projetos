@@ -4,9 +4,9 @@ Projeto com intuito de automatizar o registro de receitas que é pedido ao empre
 
 
 ## Web  
+
 -------------------
 
-<br />
 
 #### Home  
 
@@ -42,7 +42,7 @@ Projeto com intuito de automatizar o registro de receitas que é pedido ao empre
 
 <br /><br />
 
-## Mobile
+## Responsivo
 
 ---
 
