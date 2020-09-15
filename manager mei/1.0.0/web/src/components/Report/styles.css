@@ -67,6 +67,7 @@
         font-size: 0.750em;
     }
 }
+
 @media (min-width: 321px) and (max-width: 480px) {
     .report {
         width: 100%;
@@ -87,5 +88,25 @@
     .report .value {
         width: 25%;
         font-size: 0.750em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .report {
+        width: 100%;
+        height: 100px;
+        margin-top: 20px;
+        padding: 15px 10px 0 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .report {
+        width: 90%;
+        height: 100px;
+        margin-top: 20px;
+        padding: 15px 10px 0 10px;
+
+        font-size: 1.150em;
     }
 }

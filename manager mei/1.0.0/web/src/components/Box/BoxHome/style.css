@@ -27,3 +27,22 @@
         padding: 10px;
     }
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .box {
+        width: 100vw;
+        height: auto;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .box {
+        width: 100vw;
+        height: auto;
+        padding: 10px;
+
+        justify-content: center;
+        align-items: center;
+    }
+}

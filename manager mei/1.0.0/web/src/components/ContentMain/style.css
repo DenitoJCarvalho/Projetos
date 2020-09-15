@@ -105,4 +105,28 @@
     }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+    .container-content-main {
+        width: 100%;
+        height: 13.125rem;
+        margin-top: 1.25rem;
+    }
 
+    .container-content-main .link-btn {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-content-main {
+        width: 90%;
+        height: 18.75rem;
+        margin-top: 1.25rem;
+
+        font-size: 1.150em;
+    }
+
+    .container-content-main .link-btn {
+        font-size: 1em;
+    }
+}

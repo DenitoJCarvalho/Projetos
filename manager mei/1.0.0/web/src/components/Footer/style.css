@@ -62,5 +62,42 @@
         justify-content: center;
         align-items: center;
     }
+}
 
+@media (min-width: 481px) and (max-width: 768px) {
+    .footer {
+        background-image: none;
+        background-color: var(--main-color);
+        
+        width: 100%;
+        height: 3.125rem;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+        background-image: none;
+        background-color: var(--main-color);
+        
+        width: 100%;
+        height: 3.125rem;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
