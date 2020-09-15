@@ -142,7 +142,37 @@
     .register div input[type=text],
     .register div input[list] {
         height: 1.875rem;
+    }    
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+    .register {
+        width: 100%;;
     }
 
-    
+    .register div {
+        width: 100%;
+        padding: 0;
+        height: 3.75rem;
+
+        margin-top: 1.25rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .register div label {
+        text-align: center;
+        font-size: 0.750em;
+    }
+
+    .register div label small {
+        display: none;
+    }
+
+    .register div:nth-child(4) {
+        margin-top: 6.125rem;
+    }
+
 }

@@ -39,9 +39,18 @@ const Navbar = (props) => {
     const openMenuMobile = () => {
         let menuMobile = document.querySelector('#menuMobile')
         let menu = document.querySelector('.container-menu')
+        let menuBox = document.querySelector('.container-menu div')
 
         menuMobile.addEventListener('click', () => {
-            menu.style.display = 'flex'
+            //menu.style.display = 'flex'
+
+            if(menu.style.display === 'none') {
+                menu.style.display = 'flex'
+                menuBox.style.display = 'flex'
+            } else {
+                menu.style.display = 'none'
+                menuBox.style.display = 'flex'
+            }
         })
         
     }

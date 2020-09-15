@@ -80,7 +80,7 @@
 
     text-decoration: none;
 
-    font-size: 0.875em;;
+    font-size: 1em;;
 }
 
 @media (max-width: 320px) {
@@ -90,11 +90,18 @@
         margin-top: 1.25rem;
         font-size: 0.750em;
     }
+}
 
-    .container-content-main button {
-        width: 120px;
-        height: 28px;
-        font-size: 0.875em;
+@media (min-width: 321px) and (max-width: 480px) {
+    .container-content-main {
+        width: 100%;
+        height: 13.125rem;
+        margin-top: 1.25rem;
+        font-size: 0.750em;
+    }
+
+    .container-content-main .link-btn {
+        font-size: 1.250em;
     }
 }
 

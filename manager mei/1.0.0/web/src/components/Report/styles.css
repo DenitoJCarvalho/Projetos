@@ -67,3 +67,25 @@
         font-size: 0.750em;
     }
 }
+@media (min-width: 321px) and (max-width: 480px) {
+    .report {
+        width: 100%;
+        height: 100px;
+        margin-top: 20px;
+        padding: 15px 10px 0 10px;
+    }
+
+    .report div {
+        width: 100%;
+        padding: 0;
+    }
+
+    .report p {
+        font-size: 0.700em;
+    }
+
+    .report .value {
+        width: 25%;
+        font-size: 0.750em;
+    }
+}

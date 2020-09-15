@@ -9,7 +9,7 @@ import './style.css'
 
 const BoxConfig = () => {
     return (
-        <div className="box">
+        <div className="box-config">
             <FormConfig />
         </div>
     )

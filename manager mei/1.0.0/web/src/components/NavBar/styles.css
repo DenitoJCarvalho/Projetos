@@ -122,7 +122,7 @@
 }
 
 @media (max-width: 320px){
-    .navbar{
+    .navbar {
         background-color: var(--main-color);
         background-image: none;
 
@@ -193,6 +193,80 @@
     .container-menu div ul {
         top: 28%;
     }
+}
 
+@media (min-width: 321px) and (max-width: 480px) {
+    .navbar {
+        background-color: var(--main-color);
+        background-image: none;
 
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        height: 3.125rem;
+        width: 100%;
+    }
+
+    .navbar div.logoMobile {
+        display: block;
+        
+        width: 5.4375rem;
+        height: 100%;
+    }
+
+    .navbar div.logoMobile img {
+        width: 100%;
+    }
+
+    .navbar div.menuMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+        width: 15%;
+        
+        margin-left: 40%;
+    }
+
+    .navbar div.menuMobile i {
+        font-size: 1.5em;
+        color: var(--second-color);
+    }
+
+    .navbar ul {
+        position: absolute;
+
+        display: none;
+        flex-direction: column;
+
+        width: 60%;
+        height: 100%;
+        top: 0;
+
+        background-color: white;
+        z-index: 3;
+    }
+
+    .navbar ul li span#menu,
+    .navbar ul li .btn-secundary {
+        display: none;
+    }
+
+    .container-menu div{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 3;
+    }
+    .container-menu div.brand {
+        height: auto;
+    }
+
+    .container-menu div ul {
+        top: 25%;
+
+        border: 1px solid;
+    }
 }
