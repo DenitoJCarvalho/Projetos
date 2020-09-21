@@ -6,8 +6,6 @@
     padding: 25px 70px 145px 70px;
 
     margin:auto;
-
-    background-color: var(--second-color); 
 }
 
 @media (max-width: 320px) {
