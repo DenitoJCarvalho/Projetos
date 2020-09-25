@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
+import api from '../../../services/api'
 
 
 //components
@@ -6,8 +8,18 @@ import Button from '../../../components/Button'
 
 import './style.css'
 
-
 const FormConfig = () => {
+
+    useEffect(() => {
+        api.post('/config', {
+            name: document.querySelector("input[name='empreendedor']").value,
+            cnpj: document.querySelector("input[name='cnpj']").value
+        })
+        .then(response => {
+            
+        })
+    }, [])
+
     return (
         <section className="container-form-config">
             <form>
@@ -38,8 +50,8 @@ const FormConfig = () => {
                     <input 
                         type="text"
                         name="cnpj"
-                        maxLength="11"
-                        minLength="11"
+                        maxLength="14"
+                        minLength="14"
                         required
                     />
                 </div>
