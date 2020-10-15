@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    color: rgba(255, 255, 225, 1);
+    background-color: rgba(235, 242, 245,1);
+}
+
+body, input, button, textarea {
+    font: 600 18px  Nunito, sans-serif;
+}
