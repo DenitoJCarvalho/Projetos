@@ -41,8 +41,11 @@
     font-weight: 800;
 }
 
+#page-map .leaflet-container {
+    z-index: 5;
+}
+
 #page-map .create-orphanage {
-    border: 1px solid;
     position: absolute;
     right: 40px;
     bottom: 40px;
@@ -56,9 +59,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 10;
 }
 
 #page-map .create-orphanage:hover {
-    background-color: rgba(23, 214, 235, 1);
+    /*background-color: rgba(23, 214, 235, 1);*/
+    animation: sobreposicao 0.2s forwards;
 }
 
+@keyframes sobreposicao {
+    to {
+        background-color: rgba(23, 214, 235, 1);
+    }
+}
