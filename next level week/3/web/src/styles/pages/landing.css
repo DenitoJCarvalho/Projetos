@@ -1,5 +1,5 @@
 #page-landing {
-    background: linear-gradient(329.54deg, rgba(41, 182, 209, 1), rgba(136, 199, 199, 1));
+    background: linear-gradient(329.54deg, rgba(41, 182, 209, 1) 0%, rgba(136, 199, 199, 1)) 100%;
     width: 100vw;
     height: 100vh;
 
@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-#page-landing .content-wrapper {
+#page-landing div.content-wrapper {
     position: relative;
 
     width: 100%;
@@ -22,7 +22,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    background-image: ('') no-repeat 80% center;
+    background: url('../../images/landing-background.svg') no-repeat 80% center;
 }
 
 #page-landing .content-wrapper main {
@@ -75,7 +75,7 @@
 }
 
 .content-wrapper .enter-app:hover {
-    animation: hover 2s forwards;
+    animation: hover 0.2s forwards;
 }
 
 
