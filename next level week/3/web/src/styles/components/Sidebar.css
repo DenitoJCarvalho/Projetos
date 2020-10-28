@@ -1,0 +1,40 @@
+aside.sidebar {
+    position: fixed;
+    height: 100%;
+    padding: 32px 24px;
+    background: linear-gradient(329.54deg, rgba(21, 182, 214, 1) 0%, rgba(21, 214, 214, 1) 100%);
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  aside.sidebar img {
+    width: 48px;
+  }
+  
+  aside.sidebar footer a,
+  aside.sidebar footer button {
+    width: 48px;
+    height: 48px;
+  
+    border: 0;
+  
+    background: rgba(18, 175, 203, 1);
+    border-radius: 16px;
+  
+    cursor: pointer;
+  
+    transition: background-color 0.2s;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  aside.sidebar footer a:hover,
+  aside.sidebar footer button:hover {
+    background: rgba(23, 214, 235, 1);
+  }
+  
