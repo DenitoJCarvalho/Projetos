@@ -139,3 +139,9 @@
   border: 1px solid rgba(161, 233, 197, 1);
   color: rgba(55, 199, 127, 1);
 }
+
+.orphanage-details .orphanage-details-content .open-details div.open-on-weekends.dont-open {
+  background: linear-gradient(154.16deg, rgba(253, 208, 245,1) 7.85%, rgba(255, 255, 255, 1) 91.03%);
+  border: 1px solid rgba(255, 188, 212,1);
+  color: rgba(255, 102, 144, 1);
+}

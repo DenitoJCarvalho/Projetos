@@ -17,6 +17,7 @@ interface Orphanage {
     longitude: number,
     name: string
 }
+
 const mapIcon = Leaflet.icon({
     iconUrl: mapMarkerImg,
     iconSize: [32,40],
@@ -24,11 +25,12 @@ const mapIcon = Leaflet.icon({
     popupAnchor: [170, 2]
 })
 
-const OrphanagesMap = () => {
+function OrphanagesMap()  {
     const [orphanages, setOrphanages] = useState<Orphanage[]>([])
 
     useEffect(() => {
-        api.get('orphanages').then( response => {
+        api.get('orphanages')
+            .then( response => {
                 setOrphanages(response.data)  
             })
     }, [])
@@ -64,6 +66,7 @@ const OrphanagesMap = () => {
                         <Marker 
                             icon={mapIcon}
                             position={[orphanage.latitude, orphanage.longitude]}
+                            key={orphanage.id}
                         >
                             <Popup 
                                 closeButton={false}
