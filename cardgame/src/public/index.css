@@ -106,6 +106,40 @@ img {
     margin-top: 32px;
 }
 
+.container-header .content-card .feather {
+    position: absolute;
+    top: 400px;
+}
+
+.container-header .content-card .left-up {
+    width: 130px;
+    height: 119px;
+    left: 480px;
+    top: 320px;
+}
+
+.container-header .content-card .right-up {
+    width: 181px;
+    height: 155px;
+    top: 280px;
+    left: 860px;
+}
+
+.container-header .content-card .left-down {
+    width: 96px;
+    height: 100px;
+    left: 540px;
+    top: 420px;
+}
+
+.container-header .content-card .right-down {
+    width: 157px;
+    height: 155px;
+    left: 920px;
+    top: 405px;
+}
+
+
 .container-header .content-card div p {
     font: normal normal bold 15px/18px Open Sans;
     letter-spacing: 0px;
@@ -188,7 +222,7 @@ img {
 
 }
 
-.container-main section .arrow {
+.container-main .arrow {
     width: 66px;
     height: 100%;
 
@@ -197,7 +231,7 @@ img {
     align-items: center;
 }
 
-.container-main section .arrow i {
+.container-main .arrow i {
     color: var(--white-one);
 
     transform: scale(2);
@@ -205,7 +239,7 @@ img {
     cursor: pointer;
 }
 
-.container-main section .personage-card {
+.container-main .personage-card {
     position: relative;
     border-radius: 27px;
     width: 387px;
@@ -221,7 +255,7 @@ img {
     box-shadow: 0px 3px 6px var(--white-two);
 }
 
-.container-main section .personage-card .up {
+.container-main .personage-card .up {
     position: absolute;
 
     width: 379px;
@@ -234,7 +268,7 @@ img {
 
 }
 
-.container-main section .personage-card .down {
+.container-main .personage-card .down {
     border: 2px solid var(--white-one);
     border-radius: 99px;
     width: 320px;
@@ -245,7 +279,7 @@ img {
     background-color: var(--matte-black);
 }
 
-.container-main section .personage-card p {
+.container-main .personage-card p {
     width: 326px;
     height: 153px;
     margin-top: 35px;
@@ -269,7 +303,7 @@ img {
 
 .container-form #contact {
     border-radius: 10px;
-    grid-column: 4/10;
+    grid-column: 3/11;
 
     display: flex;
     flex-direction: column;
