@@ -11,9 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <body>
-    <header class="container-header">
+    <header class="container-header" id="container-header">
         <nav class="navbar">
             <div>
                 <img src="src/assets/brand.png" alt="brand" />
@@ -35,35 +38,32 @@
                 "Olha, o que quer que você esteja pensando, me faça um favor, não solte."
             </p>
 
-            <div class="mouse"> | </div>
-
-            <div class="arrow-button"></div>
         </section>
     </header>
 
     <main class="container-main">
         <section>
             <div class="arrow arrow-left">
-                
+                <i class="fas fa-chevron-left"></i>
             </div>
 
             <div class="personage-card">
-                <div>
-                    <div class="bkg-img">
-                        <div>
-                            
-                        </div>
-                    </div>
+                <div class="up">
+                    <img src="./src/assets/Grant.png" alt="camarata"/>
                 </div>
+
+                <div class="down"></div>
                 <p>
                     A Camerata foi apenas os dois no início, e suas fileiraas nunca foram destinadas a exceder com núemro a ser  contado em uma mão.
                 </p>
             </div>
 
             <div class="personage-card">
-                <div>
-                    <img src="./src/assets/Red.png" alt="red">
+                <div class="up">
+                    <img src="./src/assets/Red.png" alt="red"/>
                 </div>
+
+                <div class="down"></div>
                 
                 <p>
                     Red, uma jovem cantora, entrou em posse do Transistor. Sendo a poderosa espada falange. O grupo Possessores quer tanto ela quanto o Transistor e está perseguindo implacavelmente a sua procura.
@@ -71,21 +71,23 @@
             </div>
 
             <div class="personage-card">
-                <div>
-                    <img src="./src/assets/Sybil_2.png" alt="sybill">
+                <div class="up">
+                    <img src="./src/assets/Sybil_2.png" alt="Sybil"/>
                 </div>
+
+                <div class="down"></div>
                 <p>
                     Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.
                 </p>
             </div>
 
             <div class="arrow arrow-right">
-                
+                <i class="fas fa-chevron-right"></i>
             </div>
         </section>
     </main>
 
-    <section class="form">
+    <section class="container-form">
         <form id="contact">
             <h2>formulário</h2>
 
@@ -106,9 +108,11 @@
     </section>
 
     <footer class="container-footer">
-        <div class="arrow-up"></div>
+        <a href="#container-header" class="arrow-up" >
+            <i class="fas fa-chevron-up"></i>
+        </a>
     </footer>
    
-    
+    <script src="./src/controllers/validate.js"></script>
 </body>
 </html>
