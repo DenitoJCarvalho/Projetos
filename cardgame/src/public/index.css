@@ -26,24 +26,26 @@ body, html {
     height: 100vh;
     max-width: 1920px;
 }
-
+/*
 img {
     max-width: 100%;
     height: auto;
 }
-
+*/
 .container-header,
-.container-main,
 .container-form,
+.container-main,
 .container-footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(109, 1fr));
-    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 
     max-width: 1920px;
 }
 
 .container-header {
+    width: 100%;
+    max-width: 1920px;
     height: 1080px;    
 
     background-color: transparent;
@@ -52,17 +54,27 @@ img {
     background-size: cover;
 }
 
+.container-header nav {
+    grid-column: 1/5;
+
+    position: relative;
+    height: 109px;
+
+    background: var(--matte-black);
+}
+
 .container-header .content-card {
-    border: 2px solid red;
-    grid-column: 3/5;
+    grid-column: 2;
     background-color: transparent;
     background-image: url('../assets/filtercard.svg');
     background-position: center;
     background-size: cover;
 
     width: 586px;
-    height: 100%;
+    height: 1080px;
     padding: 30px;
+
+    margin-top: -23%;
 
     display: flex;
     flex-direction: column;
@@ -72,38 +84,33 @@ img {
     box-shadow: 0px 3px 6px var(--dark-shadow);
 }
 
-.container-header .content-card .navbar {
-    border: 1px solid green;
-    background-color: var(--matte-black);
+.container-header  .content-card .brand-title {
+    position: absolute;
+    
     height: 109px;
-    z-index: 2;
+    width: 500px;
+    margin-top: -2.5%;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
+    z-index: 2;
 }
 
-.container-header .content-card .navbar div {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+.container-header  .content-card .brand-title img {
+    transform: scale(1);
 }
 
-.container-header .content-card .navbar div h1 {
-    text-align: left;
-    font: normal normal bold 1.125em Montserrat;
-    letter-spacing: 0.68px;
-    color: var(--white-one);
+.container-header  .content-card .brand-title h1 {
+    font: normal normal bold 1.406em Montserrat;
+
     text-transform: uppercase;
+
+    color: var(--white-one);
 }
 
-.container-header .content-card .main-card {
-    width: 100%;
-    height: 754px;
-}
-
-.container-header .content-card div {
+.container-header .content-card .name-play {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -113,100 +120,65 @@ img {
     margin-top: 121px;
 }
 
-.container-header .content-card div p {
+.container-header .content-card .name-play p {
     font: normal normal bold 1.125em Open Sans;
     letter-spacing: 0px;
     text-transform: uppercase;
     color: var(--white-one);
 }
 
+.container-header .content-card .main-card {
+    width: 100%;
+    height: 754px;
 
-.container-header .content-card .main-card img {
-    margin-top: 32px;
+    background: url('../assets/imgcard.png') center no-repeat;
+    background-size: cover;
 }
 
-.container-header .content-card .feather {
+.container-header .content-card .main-card .feather {
     position: absolute;
+    height: auto;
 }
 
-.container-header .content-card .left-up {
+.container-header .content-card .main-card .left-up {
     width: 130px;
-    height: 119px;
-    left: 32%;
-    top: 46%;
+    top: 73%;
+    left: 27%
 }
 
-.container-header .content-card .left-down {
+.container-header .content-card .main-card .left-down {
     width: 96px;
-    height: 100px;
-    left: 35%;
-    top: 61%;
+    left: 31%;
+    top: 89%;
 }
 
-.container-header .content-card .right-up {
+.container-header .content-card .main-card .right-up {
     width: 181px;
-    height: 155px;
-    top: 38%;
+    top: 61%;
     left: 57%;
 }
 
-.container-header .content-card .right-down {
+.container-header .content-card .main-card .right-down {
     width: 157px;
-    height: 155px;
-    left: 62%;
-    top: 57%;
+    left: 63%;
+    top: 85%;
 }
 
 .container-header .content-card .message-player {
-    width: 50%;
-    height: 121px;
-    
+    width: 65%;
+    height: auto;
+        
     margin: 0 auto;
-    margin-top: 18%;
 
+    z-index: 2;
+}
+
+.container-header .content-card .message-player p {
     text-align: center;
     text-shadow: 0px 3px 6px var(--dark-shadow);
-    font: normal normal normal 1.250em Open Sans;
-    letter-spacing: 0px;
+    font: normal normal normal 1em Open Sans;
     color: var(--light-gray);
 }
-
-.container-header .content-card .message-player::after {
-    content: "|";
-    border-radius: 124px;
-
-    display: block;
-
-    width: 28px;
-    height: 48px;
-    padding: 1px;
-
-    margin: 0 auto;
-    margin-top: 7%;
-
-    box-shadow: 0px 3px 6px var(--dark-shadow);
-
-    background-color: var(--white-one);
-
-    color: var(--matte-black);
-}
-
-.container-header .content-card::after {
-    content: "∨";
-
-    display: block;
-
-    width: 12px;
-    height: 12px;
-
-    margin: 0 auto;
-    margin-top: 30px;
-
-    text-align: center;
-
-    color: var(--white-one);
-}
-
 
 .container-main {
     height: 1147px;   
@@ -217,7 +189,7 @@ img {
 }
 
 .container-main section {
-    grid-column: 1/13;
+    grid-column: 1/4;
 
     display: flex;
     justify-content: space-between;
@@ -246,7 +218,7 @@ img {
     position: relative;
     border-radius: 27px;
     /*width: 387px*/;
-    width: 22%;
+    width: 25%;
     height: 613px;
 
     display: flex;
@@ -259,40 +231,49 @@ img {
     box-shadow: 0px 3px 6px var(--white-two);
 }
 
-.container-main .personage-card .up {
+.container-main .personage-card .down {
     position: absolute;
+    border: 2px solid var(--white-one);
+    border-radius: 99px;
+    width: 90%;
+    height: 70%;
 
-    width: 100%;
+    margin-top:-30%;
+
+    background-color: var(--matte-black);
+}
+
+.container-main .personage-card .up {
+    position: relative;
+
+    width: 90%;
     height: 525px;
-    margin-top: -38%;
+    margin-top: -55%;
 
     display: flex;
     align-items: center;
     justify-content: center;
+} 
+
+.container-main .personage-card .up img.img-web {
+    width: 100%;
+    height: auto;
+
+    transform: scale(1.09);
 }
 
 .container-main .personage-card .up img.img-mobile {
     display: none;
 }
 
-.container-main .personage-card .down {
-    border: 2px solid var(--white-one);
-    border-radius: 99px;
-    width: 90%;
-    height: 65%;
-
-    margin-top:-25px;
-
-    background-color: var(--matte-black);
-}
-
 .container-main .personage-card p {
+    position: relative;
     width: 326px;
     height: 153px;
     margin-top: 35px;
 
     text-align: left;
-    font: normal normal normal 1.250em Open Sans;
+    font: normal normal normal 1em Open Sans;
     letter-spacing: 0px;
     color: var(--matte-black);
 }
@@ -305,7 +286,12 @@ img {
 
 .container-form #contact {
     border-radius: 10px;
-    grid-column: 3/11;
+
+    grid-column: 1/4;
+
+    width: 60%;
+
+    margin: 0 auto;
 
     display: flex;
     flex-direction: column;
@@ -313,10 +299,9 @@ img {
     align-items: center;
 
     background-color: var(--white-one);
-    
-    z-index: 2;
 
     transform: scale(1.1);
+    
 }
 
 .container-form #contact h2 {
@@ -331,17 +316,17 @@ img {
 }
 
 .container-form #contact p {
-    width: 75%;
+    width: 85%;
     height: 77px;
     
     margin-top: 40px;
 
-    font: normal normal normal 1.250em Open Sans;
+    font: normal normal normal 1em Open Sans;
     color: var(--matte-black);
 }
 
 .container-form #contact div {
-    width: 50%;
+    width: 60%;
     height: 383px;
 
     margin-top: 50px;
@@ -403,10 +388,13 @@ input[type=submit] {
 
 .container-footer .arrow-up {
     border-radius: 60px;
-    grid-column: 11;
+    grid-column: 3/4;
 
     width: 107px;
     height: 107px;
+    
+    margin: 0 auto;
+    margin-left: 60%;
 
     display: flex;
     justify-content: center;
@@ -425,37 +413,268 @@ input[type=submit] {
     cursor: pointer;
 }
 
-@media screen and (min-width: 1025) and (max-width: 1440px) {
-    .container-header, 
-    .container-main,
-    .container-form, 
-    .container-footer {
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
+@media screen and (min-width: 1367px) and (max-width: 1440px) {
+
+    .container-header .content-card .main-card .left-up {
+        top: 47%;
+        left: 25%;
     }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    body {
-        background-color: blue;
+    .container-header .content-card .main-card .left-down {
+        top: 58%;
+        left: 29%;
     }
+
+    .container-header .content-card .main-card .right-up {
+        top: 40%
+    }
+
+    .container-header .content-card .main-card .right-down {
+        top: 56%;
+    }
+
+    .container-form #contact div {
+        width: 65%;
+    }
+
 }
 
-@media screen and (min-width: 600px) and (max-width: 768px) {
-    body {
-        background-color: orange;
+@media screen and (min-width: 1254px) and (max-width: 1366px) {
+
+    .container-header .content-card .main-card .left-up {
+        top: 47%;
+        left: 23%;
     }
+
+    .container-header .content-card .main-card .left-down {
+        top: 58%;
+        left: 29%;
+    }
+
+    .container-header .content-card .main-card .right-up {
+        top: 40%
+    }
+
+    .container-header .content-card .main-card .right-down {
+        top: 56%;
+    }
+
+    .container-main .personage-card {
+        height: 610px;
+    }
+
+    .container-main .personage-card .down {
+         margin-top: -22%;
+
+         height: 64%;
+    }
+
+    .container-main .personage-card p {
+        width: 90%;
+
+        margin-top: 0;
+    }
+
+    .container-form #contact div {
+        width: 70%;
+    }
+
 }
 
-@media screen and (min-width: 321px) and (max-width: 599px) {
-    body {
-        background-color: purple;
+@media screen and (min-width: 1101px) and (max-width: 1253px) {
+
+    .container-header .content-card .main-card .left-up {
+        top: 47%;
+        left: 21%;
     }
+
+    .container-header .content-card .main-card .left-down {
+        top: 58%;
+        left: 27%;
+    }
+
+    .container-header .content-card .main-card .right-up {
+        top: 40%;
+        left: 58%
+    }
+
+    .container-header .content-card .main-card .right-down {
+        top: 56%;
+        left: 65%;
+    }
+
+    .container-main .personage-card {
+        height: 610px;
+    }
+
+    .container-main .personage-card .down {
+        border-radius: 80px;
+        margin-top: -15%;
+        height: 58%;
+    }
+
+    .container-main .personage-card p {
+        width: 90%;
+
+        margin-top: 0;
+    }
+
+    .container-form #contact div {
+        width: 80%;
+    }
+
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1100px) {
 
-/* if <= 320px */
-@media screen and(max-width: 320px) {
-    body {
-        background-color: yellow;
+    .container-header .content-card .main-card .left-up {
+        top: 47%;
+        left: 18%;
     }
+
+    .container-header .content-card .main-card .left-down {
+        top: 58%;
+        left: 23%;
+    }
+
+    .container-header .content-card .main-card .right-up {
+        top: 40%;
+        left: 59%
+    }
+
+    .container-header .content-card .main-card .right-down {
+        top: 56%;
+        left: 67%;
+    }
+
+    .container-main .personage-card {
+        height: 600px;
+    }
+
+    .container-main .personage-card .down {
+        border-radius: 60px;
+        margin-top: -5%;
+        height: 51%;
+    }
+
+    .container-main .personage-card p {
+        width: 90%;
+        margin-top: -15%;
+
+        font-size: 0.9em;
+    }
+
+    .container-form #contact div {
+        width: 85%;
+    }
+
 }
+
+@media screen and (min-width: 976px) and (max-width: 1024px) {
+
+    .container-header .content-card .main-card .left-up {
+        top: 47%;
+        left: 14%;
+    }
+
+    .container-header .content-card .main-card .left-down {
+        top: 58%;
+        left: 21%;
+    }
+
+    .container-header .content-card .main-card .right-up {
+        top: 40%;
+        left: 59%
+    }
+
+    .container-header .content-card .main-card .right-down {
+        top: 56%;
+        left: 68%;
+    }
+
+    .container-main .personage-card {
+        height: 580px;
+    }
+
+    .container-main .personage-card .down {
+        border-radius: 50px;
+        margin-top: -20%;
+        height: 49%;
+    }
+
+    .container-main .personage-card .up {
+        margin-top: -78%;
+    }
+
+    .container-main .personage-card p {
+        width: 90%;
+        margin-top: -25%;
+
+        font-size: 0.9em;
+    }
+
+    .container-form #contact p {
+        font-size: 0.9em;
+    }
+    .container-form #contact div {
+        width: 90%;
+    }
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 975px) {
+
+    .container-header  .content-card .brand-title {
+        transform: scale(0.8);
+    }
+
+    .container-header .content-card .main-card .left-up {
+        top: 47%;
+        left: 12%;
+    }
+
+    .container-header .content-card .main-card .left-down {
+        top: 58%;
+        left: 19%;
+    }
+
+    .container-header .content-card .main-card .right-up {
+        top: 40%;
+        left: 60%
+    }
+
+    .container-header .content-card .main-card .right-down {
+        top: 56%;
+        left: 70%;
+    }
+
+    .container-main .personage-card {
+        height: 580px;
+    }
+
+    .container-main .personage-card .down {
+        border-radius: 50px;
+        margin-top: -20%;
+        height: 49%;
+    }
+
+    .container-main .personage-card .up {
+        margin-top: -78%;
+    }
+
+    .container-main .personage-card p {
+        width: 90%;
+        margin-top: -25%;
+
+        font-size: 0.9em;
+    }
+
+    .container-form #contact p {
+        font-size: 0.9em;
+    }
+    .container-form #contact div {
+        width: 90%;
+    }
+
+}
+

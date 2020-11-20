@@ -18,44 +18,40 @@
 <body>
     <header class="container-header" id="container-header">
 
+        <nav></nav>
+
         <section class="content-card">
+            <div class="brand-title">
+                <img src="./src/assets/brand.png" alt="logo" />
 
-            <nav class="navbar">
-                <!--<div>
-                    <img src="src/assets/brand.png" alt="brand" />
-    
-                    <h1>supergiantgames</h1>
-                </div>-->
-            </nav>
-
-            <!--<div>
+                <h1>supergiantgames</h1>
+            </div>
+            
+            <div class="name-play">
                 <p>transistor - red the singer</p>
             </div>
+            
+            <div class="main-card">
+                <div class="feather left-up">
+                    <img src="src/assets/feather-left-up.png" alt="pena" />
+                </div>
 
-            <section class="main-card">
-                <img src="src/assets/imgcard.png" alt="image-card" />
-            </section>
+                <div class="feather left-down">
+                    <img src="src/assets/feather-left-down.png" alt="pena" />
+                </div>
 
-            <div class="feather left-up">
-                <img src="src/assets/feather-left-up.png" alt="pena" />
+                <div class="feather right-up">
+                    <img src="src/assets/feather-right-up.png" alt="pena" />
+                </div>
+
+                <div class="feather right-down">
+                    <img src="src/assets/feather-right-down.png" alt="pena" />
+                </div>
             </div>
 
-            <div class="feather left-down">
-                <img src="src/assets/feather-left-down.png" alt="pena" />
-            </div>
-
-            <div class="feather right-up">
-                <img src="src/assets/feather-right-up.png" alt="pena" />
-            </div>
-
-            <div class="feather right-down">
-                <img src="src/assets/feather-right-down.png" alt="pena" />
-            </div>
-
-            <p class="message-player">
-                "Olha, o que quer que você esteja pensando, me faça um favor, não solte."
-            </p>-->
-
+            <div class="message-player">
+               <p> "Olha, o que quer que você esteja pensando, me faça um favor, não solte."</p>
+            </div> 
         </section>
     </header>
 
@@ -66,24 +62,29 @@
             </div>
 
             <div class="personage-card">
+                <div class="down"></div>
                 <div class="up">
-                    <img src="./src/assets/Grant.png" alt="camarata" class="img-web" />
-                    <img src="./src/assets/Grant@2x.png" alt="camarata" class="img-mobile" />
+                    <img 
+                        src="./src/assets/Grant.png" alt="camarata" class="img-web"
+                        srcset="./src/assets/Grant@2x.png"
+                        sizes="(max-width: 1024px)"     
+                    />
+                    <!--<img src="./src/assets/Grant@2x.png" alt="camarata" class="img-mobile" />-->
                 </div>
 
-                <div class="down"></div>
                 <p>
-                    A Camerata foi apenas os dois no início, e suas fileiraas nunca foram destinadas a exceder com núemro a ser  contado em uma mão.
+                    A Camerata foi apenas os dois no início, e suas fileiras nunca foram destinadas a exceder com núemro a ser  contado em uma mão.
                 </p>
             </div>
 
             <div class="personage-card">
+
+                <div class="down"></div>
+
                 <div class="up">
                     <img src="./src/assets/Red.png" alt="red" class="img-web" />
                     <img src="./src/assets/Red@2x.png" alt="red" class="img-mobile" id="img-mobile-red"/>
                 </div>
-
-                <div class="down"></div>
                 
                 <p>
                     Red, uma jovem cantora, entrou em posse do Transistor. Sendo a poderosa espada falange. O grupo Possessores quer tanto ela quanto o Transistor e está perseguindo implacavelmente a sua procura.
@@ -91,12 +92,13 @@
             </div>
 
             <div class="personage-card">
+                <div class="down"></div>
+
                 <div class="up">
                     <img src="./src/assets/Sybil_2.png" alt="Sybil" class="img-web" />
                     <img src="./src/assets/Sybil_2.png" alt="Sybil" class="img-mobile" />
                 </div>
 
-                <div class="down"></div>
                 <p>
                     Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.
                 </p>
@@ -109,7 +111,7 @@
     </main>
 
     <section class="container-form">
-        <form id="contact">
+        <form id="contact"  method="POST" >
             <h2>formulário</h2>
 
             <p>
