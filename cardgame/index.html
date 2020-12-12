@@ -9,8 +9,7 @@
 
     <!-- Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -18,43 +17,34 @@
 <body>
     <header class="container-header" id="container-header">
 
-        <nav></nav>
-
-        <section class="content-card">
+        <nav>
             <div class="brand-title">
                 <img src="./src/assets/brand.png" alt="logo" />
 
                 <h1>supergiantgames</h1>
             </div>
+        </nav>
+
+        <section class="content-card">
             
             <div class="name-play">
                 <p>transistor - red the singer</p>
             </div>
             
             <div class="main-card">
-                <div class="feather left-up">
-                    <img src="src/assets/feather-left-up.png" alt="pena" />
-                </div>
-
-                <div class="feather left-down">
-                    <img src="src/assets/feather-left-down.png" alt="pena" />
-                </div>
-
-                <div class="feather right-up">
-                    <img src="src/assets/feather-right-up.png" alt="pena" />
-                </div>
-
-                <div class="feather right-down">
-                    <img src="src/assets/feather-right-down.png" alt="pena" />
-                </div>
+                <img 
+                    src="./src/assets/imgcard.png" 
+                    class="card" 
+                    alt="card"
+                />
             </div>
-
+            
             <div class="message-player">
                <p> "Olha, o que quer que você esteja pensando, me faça um favor, não solte."</p>
             </div> 
         </section>
     </header>
-
+    
     <main class="container-main">
         <section>
             <div class="arrow arrow-left">
@@ -69,7 +59,6 @@
                         srcset="./src/assets/Grant@2x.png"
                         sizes="(max-width: 1024px)"     
                     />
-                    <!--<img src="./src/assets/Grant@2x.png" alt="camarata" class="img-mobile" />-->
                 </div>
 
                 <p>
@@ -131,8 +120,8 @@
     </section>
 
     <footer class="container-footer">
-        <a href="#container-header" class="arrow-up" >
-            <i class="fas fa-chevron-up"></i>
+        <a href="#container-header" class="arrow-up" id="arrow-up">
+            <i class="fas fa-chevron-up" id="fa-chevron-up"></i>
         </a>
     </footer>
    
