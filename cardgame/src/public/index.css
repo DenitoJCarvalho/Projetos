@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 :root {
     /* colors*/
     --white-one: #FFFFFF;
@@ -28,6 +30,10 @@ body {
     width: 100vw;
     height: 100vh;
     max-width: 1920px;
+}
+
+img {
+    max-width: 100%;
 }
 
 .container-header,
@@ -174,26 +180,9 @@ body {
     grid-column: 1/4;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 
-}
-
-.container-main .arrow {
-    width: 5%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-main .arrow i {
-    color: var(--white-one);
-
-    transform: scale(2);
-
-    cursor: pointer;
 }
 
 .container-main .personage-card {
@@ -236,15 +225,8 @@ body {
     justify-content: center;
 } 
 
-.container-main .personage-card .up img.img-web {
-    width: 100%;
-    height: auto;
-
+.container-main .personage-card .up img {
     transform: scale(1.09);
-}
-
-.container-main .personage-card .up img.img-mobile {
-    display: none;
 }
 
 .container-main .personage-card p {
@@ -331,7 +313,7 @@ body {
 
 input[type=text], input[type=email] {
     border: 1px solid var(--matte-black);
-    width: 12.5rem;
+    width: 47%;
     height: 2rem;
 
     font-style: normal;
@@ -349,7 +331,7 @@ input[type=email] {
 
 textarea {
     border: 1px solid var(--matte-black);
-    width: 26.5rem;
+    width: 100%;
     height: 12rem;
 
     font-style: normal;
@@ -424,268 +406,187 @@ input[type=submit] {
     cursor: pointer;
 }
 
-@media screen and (min-width: 1367px) and (max-width: 1440px) {
-
-    .container-header .content-card .main-card .left-up {
-        top: 47%;
-        left: 25%;
-    }
-
-    .container-header .content-card .main-card .left-down {
-        top: 58%;
-        left: 29%;
-    }
-
-    .container-header .content-card .main-card .right-up {
-        top: 40%
-    }
-
-    .container-header .content-card .main-card .right-down {
-        top: 56%;
-    }
-
-    .container-form #contact div {
-        width: 65%;
-    }
-
-}
-
-@media screen and (min-width: 1254px) and (max-width: 1366px) {
-
-    .container-header .content-card .main-card .left-up {
-        top: 47%;
-        left: 23%;
-    }
-
-    .container-header .content-card .main-card .left-down {
-        top: 58%;
-        left: 29%;
-    }
-
-    .container-header .content-card .main-card .right-up {
-        top: 40%
-    }
-
-    .container-header .content-card .main-card .right-down {
-        top: 56%;
-    }
-
-    .container-main .personage-card {
-        height: 610px;
-    }
-
+@media (min-width: 1201px ) and (max-width: 1400px) {
     .container-main .personage-card .down {
-         margin-top: -22%;
+        height: 65%;
+    }
 
-         height: 64%;
+    .container-main .personage-card .up {
+        margin-top: -60%;
     }
 
     .container-main .personage-card p {
-        width: 90%;
-
         margin-top: 0;
+    }
+
+    .container-form #contact p {
+        width: 70%;
     }
 
     .container-form #contact div {
         width: 70%;
     }
 
+    .container-footer {
+        height: 16rem;
+    }
 }
 
-@media screen and (min-width: 1101px) and (max-width: 1253px) {
-
-    .container-header .content-card .main-card .left-up {
-        top: 47%;
-        left: 21%;
-    }
-
-    .container-header .content-card .main-card .left-down {
-        top: 58%;
-        left: 27%;
-    }
-
-    .container-header .content-card .main-card .right-up {
-        top: 40%;
-        left: 58%
-    }
-
-    .container-header .content-card .main-card .right-down {
-        top: 56%;
-        left: 65%;
+@media (min-width: 901px) and (max-width: 1200px) {
+    .container-main {
+        height: 50rem;
     }
 
     .container-main .personage-card {
-        height: 610px;
+        height: 25rem;
+    }
+    
+    .container-main .personage-card .down {
+        height: 60%;
+
+        border-radius: 70px;
     }
 
-    .container-main .personage-card .down {
-        border-radius: 80px;
-        margin-top: -15%;
-        height: 58%;
+    .container-main .personage-card .up {
+        height: 18rem;
+        margin-top: -50%;
+    }
+
+    .container-main .personage-card .up img.img-web {
+        transform: scale(1.0);
     }
 
     .container-main .personage-card p {
-        width: 90%;
+        width: 13rem;
 
-        margin-top: 0;
+        margin-top: 2rem;
+
+        font-size: 0.9em;
+    }
+
+    .container-form #contact p {
+        width: 75%;
+
+        font-size: 0.9em;
     }
 
     .container-form #contact div {
+        width: 75%;
+    }
+
+    .container-footer {
+        height: 14rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .container-main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        height: 50rem;
+    }
+
+    .container-main section {
+        grid-column: 1/3;
+        grid-row: 1/3;
+
         width: 80%;
-    }
+        height: 90%;
 
-}
+        margin: 0 auto;
 
-@media screen and (min-width: 1025px) and (max-width: 1100px) {
-
-    .container-header .content-card .main-card .left-up {
-        top: 47%;
-        left: 18%;
-    }
-
-    .container-header .content-card .main-card .left-down {
-        top: 58%;
-        left: 23%;
-    }
-
-    .container-header .content-card .main-card .right-up {
-        top: 40%;
-        left: 59%
-    }
-
-    .container-header .content-card .main-card .right-down {
-        top: 56%;
-        left: 67%;
+        flex-flow: row wrap;
     }
 
     .container-main .personage-card {
-        height: 600px;
+        width: 48%;
+        height: 20rem;
     }
 
     .container-main .personage-card .down {
-        border-radius: 60px;
-        margin-top: -5%;
-        height: 51%;
-    }
-
-    .container-main .personage-card p {
+        margin-top: 0;
         width: 90%;
-        margin-top: -15%;
+        height: 53%;
 
-        font-size: 0.9em;
-    }
-
-    .container-form #contact div {
-        width: 85%;
-    }
-
-}
-
-@media screen and (min-width: 976px) and (max-width: 1024px) {
-
-    .container-header .content-card .main-card .left-up {
-        top: 47%;
-        left: 14%;
-    }
-
-    .container-header .content-card .main-card .left-down {
-        top: 58%;
-        left: 21%;
-    }
-
-    .container-header .content-card .main-card .right-up {
-        top: 40%;
-        left: 59%
-    }
-
-    .container-header .content-card .main-card .right-down {
-        top: 56%;
-        left: 68%;
-    }
-
-    .container-main .personage-card {
-        height: 580px;
-    }
-
-    .container-main .personage-card .down {
-        border-radius: 50px;
-        margin-top: -20%;
-        height: 49%;
+        border-radius: 25px;
     }
 
     .container-main .personage-card .up {
-        margin-top: -78%;
+        margin-top: 0;
+        height: 50%;
     }
 
+    .container-main .personage-card .up img {
+        transform: scale(0.55);
+    }
+    
     .container-main .personage-card p {
-        width: 90%;
-        margin-top: -25%;
+        margin-top: 1em;
 
-        font-size: 0.9em;
+        width: 90%;
+
+        font-size: 0.75em;
     }
 
+    .container-form {
+        height: 35rem;
+    }
+
+    .container-form #contact {
+        margin-top: 0;
+
+        height: 100%;
+        padding: 0 1em;
+
+        transform: scale(0.9);
+    }
+
+    .container-form #contact h2 {
+        margin-top: 0.5em ;
+        font-size: 1.5em;
+    }
+    
     .container-form #contact p {
+        width: 100%;
+        height: 7rem;
+
+        margin-top: 2em;
+
         font-size: 0.9em;
     }
+
     .container-form #contact div {
-        width: 90%;
+        margin-top: 0;
+        width: 100%;
     }
 
-}
-
-@media screen and (min-width: 800px) and (max-width: 975px) {
-
-    .container-header  .content-card .brand-title {
-        transform: scale(0.8);
-    }
-
-    .container-header .content-card .main-card .left-up {
-        top: 47%;
-        left: 12%;
-    }
-
-    .container-header .content-card .main-card .left-down {
-        top: 58%;
-        left: 19%;
-    }
-
-    .container-header .content-card .main-card .right-up {
-        top: 40%;
-        left: 60%
-    }
-
-    .container-header .content-card .main-card .right-down {
-        top: 56%;
-        left: 70%;
-    }
-
-    .container-main .personage-card {
-        height: 580px;
-    }
-
-    .container-main .personage-card .down {
-        border-radius: 50px;
-        margin-top: -20%;
-        height: 49%;
-    }
-
-    .container-main .personage-card .up {
-        margin-top: -78%;
-    }
-
-    .container-main .personage-card p {
-        width: 90%;
-        margin-top: -25%;
+    input[type=text], input[type=email] {
+        width: 100%;
 
         font-size: 0.9em;
     }
 
-    .container-form #contact p {
-        font-size: 0.9em;
-    }
-    .container-form #contact div {
-        width: 90%;
+    input[type=email] {
+        margin-left: 0;
     }
 
+    textarea {
+        font-size: 0.9em;
+    }
+
+    .container-footer {
+        height: 12rem;
+    }
+
+    .container-footer .arrow-up {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .container-footer .arrow-up i {
+        font-size: 0.8em;
+    }
 }
 
