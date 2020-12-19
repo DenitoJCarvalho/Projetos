@@ -38,7 +38,7 @@ img {
     grid-gap: 30px;
 
     max-width: 1920px;
-    height: 1080px;    
+    height: auto;    
 
     background-color: transparent;
     background-image: url('../assets/background.png');
@@ -66,7 +66,7 @@ img {
 
 .container-header .navbar div h1 {
     text-align: left;
-    font: normal normal bold 23px/36px Montserrat;
+    font: normal normal bold 1.125em Montserrat;
     letter-spacing: 0.68px;
     color: var(--white-one);
     text-transform: uppercase;
@@ -80,7 +80,6 @@ img {
     background-size: cover;
 
     height: 1080px;
-    max-height: 1080px;
     margin-top: -145px;
     padding: 30px;
 
@@ -90,6 +89,10 @@ img {
     align-items: flex-start;
 
     box-shadow: 0px 3px 6px var(--dark-shadow);
+}
+.container-header .content-card .main-card {
+    width: 100%;
+    height: 754px;
 }
 
 .container-header .content-card div {
@@ -102,69 +105,66 @@ img {
     margin-top: 121px;
 }
 
-.container-header .content-card .main-card img {
-    margin-top: 32px;
-}
-
-.container-header .content-card .feather {
-    position: absolute;
-    top: 400px;
-}
-
-.container-header .content-card .left-up {
-    width: 130px;
-    height: 119px;
-    left: 480px;
-    top: 320px;
-}
-
-.container-header .content-card .right-up {
-    width: 181px;
-    height: 155px;
-    top: 280px;
-    left: 860px;
-}
-
-.container-header .content-card .left-down {
-    width: 96px;
-    height: 100px;
-    left: 540px;
-    top: 420px;
-}
-
-.container-header .content-card .right-down {
-    width: 157px;
-    height: 155px;
-    left: 920px;
-    top: 405px;
-}
-
-
 .container-header .content-card div p {
-    font: normal normal bold 15px/18px Open Sans;
+    font: normal normal bold 1.125em Open Sans;
     letter-spacing: 0px;
     text-transform: uppercase;
     color: var(--white-one);
 }
 
 
+.container-header .content-card .main-card img {
+    margin-top: 32px;
+}
+
+.container-header .content-card .feather {
+    position: absolute;
+}
+
+.container-header .content-card .left-up {
+    width: 130px;
+    height: 119px;
+    left: 32%;
+    top: 46%;
+}
+
+.container-header .content-card .left-down {
+    width: 96px;
+    height: 100px;
+    left: 35%;
+    top: 61%;
+}
+
+.container-header .content-card .right-up {
+    width: 181px;
+    height: 155px;
+    top: 38%;
+    left: 57%;
+}
+
+.container-header .content-card .right-down {
+    width: 157px;
+    height: 155px;
+    left: 62%;
+    top: 57%;
+}
+
 .container-header .content-card .message-player {
-    width: 271px;
+    width: 50%;
     height: 121px;
     
     margin: 0 auto;
-    margin-top: 108px;
+    margin-top: 18%;
 
     text-align: center;
     text-shadow: 0px 3px 6px var(--dark-shadow);
-    font: normal normal normal 20px/21px Open Sans;
+    font: normal normal normal 1.250em Open Sans;
     letter-spacing: 0px;
     color: var(--light-gray);
 }
 
 .container-header .content-card .message-player::after {
     content: "|";
-    border: 1px solid;
     border-radius: 124px;
 
     display: block;
@@ -174,7 +174,7 @@ img {
     padding: 1px;
 
     margin: 0 auto;
-    margin-top: 32px;
+    margin-top: 7%;
 
     box-shadow: 0px 3px 6px var(--dark-shadow);
 
@@ -223,7 +223,7 @@ img {
 }
 
 .container-main .arrow {
-    width: 66px;
+    width: 5%;
     height: 100%;
 
     display: flex;
@@ -242,7 +242,8 @@ img {
 .container-main .personage-card {
     position: relative;
     border-radius: 27px;
-    width: 387px;
+    /*width: 387px*/;
+    width: 22%;
     height: 613px;
 
     display: flex;
@@ -258,9 +259,9 @@ img {
 .container-main .personage-card .up {
     position: absolute;
 
-    width: 379px;
+    width: 100%;
     height: 525px;
-    margin-top: -118px;
+    margin-top: -38%;
 
     display: flex;
     align-items: center;
@@ -270,11 +271,12 @@ img {
 .container-main .personage-card .up img.img-mobile {
     display: none;
 }
+
 .container-main .personage-card .down {
     border: 2px solid var(--white-one);
     border-radius: 99px;
-    width: 320px;
-    height: 427px;
+    width: 90%;
+    height: 65%;
 
     margin-top:-25px;
 
@@ -287,7 +289,7 @@ img {
     margin-top: 35px;
 
     text-align: left;
-    font: normal normal normal 20px/25px Open Sans;
+    font: normal normal normal 1.250em Open Sans;
     letter-spacing: 0px;
     color: var(--matte-black);
 }
@@ -320,28 +322,28 @@ img {
 }
 
 .container-form #contact h2 {
-    width: 246px;
+    width: 100%;
     height: 43px;
 
     text-transform: uppercase;
     text-align: center;
-    font: normal normal bold 35px/46px Montserrat;
+    font: normal normal bold 1.750em Montserrat;
     letter-spacing: -0.88px;
     color: var(--light-green);
 }
 
 .container-form #contact p {
-    width: 746px;
+    width: 75%;
     height: 77px;
     
     margin-top: 40px;
 
-    font: normal normal normal 20px/21px Open Sans;
+    font: normal normal normal 1.250em Open Sans;
     color: var(--matte-black);
 }
 
 .container-form #contact div {
-    width: 528px;
+    width: 50%;
     height: 383px;
 
     margin-top: 50px;
@@ -357,7 +359,7 @@ input[type=text], input[type=email] {
     width: 249px;
     height: 48px;
 
-    font: normal normal normal 18px/30px Open Sans;
+    font: normal normal normal 1.125em Open Sans;
     color: var(--matte-black);
     text-transform: capitalize;
 }
@@ -371,7 +373,7 @@ textarea {
     width: 528px;
     height: 197px;
 
-    font: normal normal normal 18px/30px Open Sans;
+    font: normal normal normal 1.125em Open Sans;
     color: var(--matte-black);
 
     resize: none;
@@ -384,7 +386,7 @@ input[type=submit] {
 
     background-color: var(--light-green);
 
-    font: normal normal normal 18px/30px Open Sans;
+    font: normal normal normal 1.125em Open Sans;
     color: var(--white-one);
 
     text-transform: uppercase;
@@ -434,11 +436,6 @@ input[type=submit] {
     body {
         background-color: blue;
     }
-
-    .container-header {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 768px) {
@@ -456,146 +453,6 @@ input[type=submit] {
 
 /* if <= 320px */
 @media screen and  (max-width: 320px) {
-    .container-header, .container-main {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .container-header .navbar {
-        width: 100%;
-        height: 52px;
-        margin-top: 0;
-    }
-
-    .container-header .navbar div img {
-        width: 52px;
-        height: 52px;
-
-        flex-shrink: 1;
-    }
-
-    .container-header .navbar div  h1 {
-        width: 100%;
-
-        flex-shrink: 2;
-
-        font-size: 0.8em;
-    }
-
-    .container-header .content-card {
-        width: 100%;
-    }
-
-    .container-header .content-card div {
-        margin-top: 100px;
-    }
-
-    .container-header .content-card div p {
-        font-size: 0.7em;
-    }
-
-    .container-header .content-card .main-card {
-        margin-top: 0px;
-    }
-
-    .container-header .content-card .feather {
-        left: 0;
-    }
-
-    .container-header .content-card .left-up {
-        top: 100px;
-        left: -22px;
-        transform: scale(0.7);
-    }
-
-    .container-header .content-card .left-down {
-        top: 180px;
-        transform: scale(0.7);
-    }
-
-    .container-header .content-card .right-up {
-        left: 185px;
-        top: 70px;
-        transform: scale(0.5);
-    }
-
-    .container-header .content-card .right-down {
-        left: 215px;
-        top: 162px;
-        transform: scale(0.35);
-    }
-
-    .container-header .content-card .message-player {
-        margin-top: 18px;
-    }
-
-    .container-header .content-card::after {
-        display: none;
-    }
-
-    .container-main {
-        height: 250vh;
-        margin-top: 27px;
-    }
-
-    .container-main section {
-        width: 290px;
-        height: 100%;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .container-main section .arrow {
-        display: none;
-    }
-
-    .container-main section .personage-card {
-        width: 100%;
-        height: 410px;
-        padding: 8px;
-        top: 42px;
-    }
-
-    .container-main section .personage-card .up {
-        margin-top: 0;
-
-        width: 100%;
-        height: 350px;
-        top: -78px;
-    }
-
-    .container-main section .personage-card .up img.img-web {
-        display: none;
-    }
-
-    .container-main section .personage-card .up img.img-mobile {
-        display: block;
-        transform: scale(0.78);
-    }
-
-    .container-main section .personage-card .up img#img-mobile-red {
-        transform: scale(0.78);
-        margin-top: -62px;
-    }
-
-    .container-main section .personage-card .down {
-       width: 280px;
-       height: 350px;
-    }
-
-    .container-main section .personage-card p {
-        font-size: 0.75em;
-        width: 100%;
-    }
     
-    .container-form {} 
-    
-    .container-footer {
-        display: none;
-    }
     
 }
