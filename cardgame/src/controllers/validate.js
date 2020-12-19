@@ -5,10 +5,11 @@ let message = {
 }
 
 
-form.addEventListener('submit', () => {
+form.addEventListener('submit', (e) => {
     if(!document.querySelector("input[type='text']").value){
 
         alert(message.error)
+        e.preventDefault()
 
         return false
     } else {

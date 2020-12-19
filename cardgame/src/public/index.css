@@ -32,13 +32,19 @@ img {
     height: auto;
 }
 
-.container-header {
+.container-header,
+.container-main,
+.container-form,
+.container-footer {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(109, 1fr));
     grid-gap: 30px;
 
     max-width: 1920px;
-    height: auto;    
+}
+
+.container-header {
+    height: 1080px;    
 
     background-color: transparent;
     background-image: url('../assets/background.png');
@@ -46,8 +52,28 @@ img {
     background-size: cover;
 }
 
-.container-header .navbar {
-    grid-column: 1/13;
+.container-header .content-card {
+    border: 2px solid red;
+    grid-column: 3/5;
+    background-color: transparent;
+    background-image: url('../assets/filtercard.svg');
+    background-position: center;
+    background-size: cover;
+
+    width: 586px;
+    height: 100%;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    box-shadow: 0px 3px 6px var(--dark-shadow);
+}
+
+.container-header .content-card .navbar {
+    border: 1px solid green;
     background-color: var(--matte-black);
     height: 109px;
     z-index: 2;
@@ -58,13 +84,13 @@ img {
     
 }
 
-.container-header .navbar div {
+.container-header .content-card .navbar div {
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-.container-header .navbar div h1 {
+.container-header .content-card .navbar div h1 {
     text-align: left;
     font: normal normal bold 1.125em Montserrat;
     letter-spacing: 0.68px;
@@ -72,24 +98,6 @@ img {
     text-transform: uppercase;
 }
 
-.container-header .content-card {
-    grid-column: 5/9;
-    background-color: transparent;
-    background-image: url('../assets/filtercard.svg');
-    background-position: center;
-    background-size: cover;
-
-    height: 1080px;
-    margin-top: -145px;
-    padding: 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    box-shadow: 0px 3px 6px var(--dark-shadow);
-}
 .container-header .content-card .main-card {
     width: 100%;
     height: 754px;
@@ -201,11 +209,6 @@ img {
 
 
 .container-main {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 30px;
-
-    max-width: 1920px;
     height: 1147px;   
 
     background-color: var(--matte-black);
@@ -295,11 +298,6 @@ img {
 }
 
 .container-form {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 30px;
-
-    max-width: 1920px;
     height: 700px;   
 
     background: transparent linear-gradient(143deg, var(--light-blue) 0%, var(--water-green) 100%) 0% 0% no-repeat;
@@ -395,11 +393,6 @@ input[type=submit] {
 }
 
 .container-footer {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 30px;
-
-    max-width: 1920px;
     height: 410px;
 
     background: var(--matte-black) 0% 0% no-repeat;
@@ -432,6 +425,15 @@ input[type=submit] {
     cursor: pointer;
 }
 
+@media screen and (min-width: 1025) and (max-width: 1440px) {
+    .container-header, 
+    .container-main,
+    .container-form, 
+    .container-footer {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     body {
         background-color: blue;
@@ -452,7 +454,8 @@ input[type=submit] {
 
 
 /* if <= 320px */
-@media screen and  (max-width: 320px) {
-    
-    
+@media screen and(max-width: 320px) {
+    body {
+        background-color: yellow;
+    }
 }
